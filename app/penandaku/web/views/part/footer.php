@@ -15,13 +15,6 @@ $('.penandaku-btn-register').on('click', function() {
           $this.button('reset');
         }, 800);
 });
-$('.penandaku-login').on('click', function() {
-    var $this = $(this);
-        $this.button('loading');
-        setTimeout(function() {
-          $this.button('reset');
-        }, 800);
-});
 </script>
 </body>
 </html>

@@ -25,18 +25,19 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <img class="penandaku-logo" src="" height="30" alt="Penandaku.com">
+          <img class="penandaku-logo" src="assets/img/penandyaku.png" height="30" alt="Penandaku.com">
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <form class="navbar-form navbar-right">
+            <form action="<?php print base_url() ?>member/auth/" accept-charset="utf-8" method="POST" class="navbar-form navbar-right">
               <div class="form-group">
                 <input type="text" placeholder="Username or Email" class="form-control">
               </div>
               <div class="form-group">
                 <input type="password" placeholder="Password" class="form-control">
               </div>
+              <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
               <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Signing in..." class="penandaku-login btn btn-default" style="font-family:ubuntu">Sign in</button>
-              <button type="submit" class="btn btn-success" style="font-family:ubuntu">Sign up</button>
+              <a href="<?php print base_url() ?>join?utf8=✓&source=header" type="submit" class="btn btn-success" style="font-family:ubuntu">Sign up</a>
             </form>
         </div>
       </div>
