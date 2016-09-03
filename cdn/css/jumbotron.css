@@ -1,0 +1,131 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding-top: 50px;
+  padding-bottom: 7px;
+}
+
+.penandaku-navbar {
+  background-color: #f5f5f5;
+    color: #333;
+    border-bottom: 1px solid #e5e5e5;
+    font-family: 'ubuntu';
+    font-weight: initial;
+    font-size: 15px;
+}
+
+.penandaku-logo {
+  margin-top: 8px;
+}
+
+.penandaku-form {
+  height: 45px;
+  font-family: 'ubuntu';
+}
+
+.penandaku-btn-register {
+  padding: 0.55em 1em;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 2.5;
+    color: #fff;
+    width: 100%;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+    background-color: #6cc644;
+    background-image: -webkit-linear-gradient(#7bcc58, #60b838);
+    background-image: linear-gradient(#7bcc58, #60b838);
+    border-color: #55a532;
+}
+
+.penandaku-btn-login {
+  padding: 0.55em 1em;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 2.0;
+    color: #fff;
+    width: 100%;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+    background-color: #6cc644;
+    background-image: -webkit-linear-gradient(#7bcc58, #60b838);
+    background-image: linear-gradient(#7bcc58, #60b838);
+    border-color: #55a532;
+}
+
+.penandaku-btn-reset {
+  padding: 0.55em 1em;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 2.0;
+    color: #fff;
+    width: 100%;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+    background-color: #6cc644;
+    background-image: -webkit-linear-gradient(#7bcc58, #60b838);
+    background-image: linear-gradient(#7bcc58, #60b838);
+    border-color: #55a532;
+}
+
+.create-account {
+  padding: 15px 20px;
+  text-align: center;
+  border: 1px solid #d8dee2;
+  border-radius: 5px;
+}
+
+.penandaku-note-register {
+  font-family: Ubuntu, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #555;
+}
+
+.penandaku-tentang {
+  font-family: 'ubuntu';
+}
+
+.penandaku-tentang-image {
+  background-image: url('../img/penandaku-laptop.png');
+  width: 500px;
+
+}
+
+.penandaku-batas {
+  height: 2px;
+  margin: 40px 0;
+  clear: both;
+  background-image: -webkit-linear-gradient(left, #b8e1ff 33.3333%, #fcd2c5 33.3333%, #fcd2c5 66.6666%, #e0c5eb 66.6666%);
+  background-image: linear-gradient(to right, #b8e1ff 33.3333%, #fcd2c5 33.3333%, #fcd2c5 66.6666%, #e0c5eb 66.6666%);
+  border: 0;
+}
+
+.main-footer {
+  padding-bottom: 100px;
+      background-color: #fff;
+      background-image: url(https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xaf1/t39.2365-6/11057196_396547827217374_525513866_n.png);
+      background-size: 980px auto;
+      background-position: bottom center;
+      background-repeat: no-repeat;
+}
+
+.active-panel-member {
+  z-index: 2;
+  color: #fff;
+  background-color: transparent;;;
+  border: 1px solid #ddd;
+  border-left: 3px solid #66AE53;
+}
+
+.penandaku-author {
+  margin-top: -6px;
+  border-radius: 5px;
+  height: 30px;
+}
+
+#loader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
+}
