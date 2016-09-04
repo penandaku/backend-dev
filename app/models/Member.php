@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 * @version      Beta
 * @author       Fika Ridaul Maulayya
 * @copyright    Copyright © 2016 Penandaku, Inc - Simple Apps for Save and Access Bookmark online.
-* @link         httpa://penandaku.com
+* @link         https://penandaku.com
 */
 class Member extends CI_Model
 {

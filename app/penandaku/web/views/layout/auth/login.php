@@ -18,7 +18,6 @@
   <body style="background-color:#f9f9f9">
     <div class="container" style="margin-top:150px">
       <div class="col-md-4">
-
       </div>
       <div class="col-md-4">
           <div class="panel panel-default" style="font-family:'ubuntu'">
@@ -43,7 +42,6 @@
         </div>
       </div>
       <div class="col-md-4">
-
       </div>
     </div>
     <script src="<?php print cdn('js/jquery.min.js') ?>"></script>

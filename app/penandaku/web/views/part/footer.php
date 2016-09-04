@@ -8,13 +8,27 @@
 <script src="<?php print cdn('js/custom.js') ?>"></script>
 <script src="<?php print cdn('js/ie10-viewport-bug-workaround.js') ?>"></script>
 <script>
-$('.penandaku-btn-register').on('click', function() {
-    var $this = $(this);
-        $this.button('loading');
-        setTimeout(function() {
-          $this.button('reset');
-        }, 800);
-});
+    $('.penandaku-btn-register').on('click', function() {
+        var $this = $(this);
+            $this.button('loading');
+            setTimeout(function() {
+              $this.button('reset');
+            }, 800);
+    });
+
+    $.ajaxSetup({
+    beforeSend: function() {
+       $('#loader').fadeIn();
+       $('.overlay-loader').fadeIn();
+    },
+    /*
+    complete: function(){
+      $('#loader').fadeOut(1000);
+      $('.overlay-loader').fadeOut(1000);
+    },
+    */
+    success: function() {}
+    });
 </script>
 </body>
 </html>

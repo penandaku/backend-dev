@@ -25,10 +25,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <img class="penandaku-logo" src="assets/img/penandyaku.png" height="30" alt="Penandaku.com">
+          <img class="penandaku-logo" src="" height="30" alt="Penandaku.com">
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-            <form action="<?php print base_url() ?>member/auth/" accept-charset="utf-8" method="POST" class="navbar-form navbar-right">
+            <form action="<?php print base_url() ?>login/" accept-charset="utf-8" method="POST" class="navbar-form navbar-right">
               <div class="form-group">
                 <input type="text" placeholder="Username or Email" class="form-control">
               </div>

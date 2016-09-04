@@ -5,7 +5,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 * @version      Beta
 * @author       Fika Ridaul Maulayya
 * @copyright    Copyright © 2016 Penandaku, Inc - Simple Apps for Save and Access Bookmark online.
-* @link         httpa://penandaku.com
+* @link         https://penandaku.com
 */
 class Web extends CI_Controller {
 
@@ -72,7 +72,7 @@ class Web extends CI_Controller {
             //create data array
             $data = array(
                       'error' => '<div class="alert alert-danger">
-                                    <strong>FAILED!</strong> Username atau Password Anda salah..
+                                    <strong>FAILED!</strong> Username atau Password Anda salah.
                                   </div>'
             );
             $this->load->view('layout/auth/login', $data);
