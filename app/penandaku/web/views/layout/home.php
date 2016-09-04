@@ -5,7 +5,7 @@
     <p style="font-family: 'Lato'; font-weight:bold;font-size:25px">Simpan dan Akses Bookmark Anda secara online dimana dan kapanpun saja secara mudah.</p>
     </div>
     <div class="col-md-4">
-      <form id="form-register" action="" method="POST">
+      <form id="form-register" action="<?php print base_url() ?>join/" method="POST">
         <div class="form-group">
           <input type="text" name="nama" class="form-control" id="nama" placeholder="Masukan Nama Anda."  style="height:45px;font-size:16px;font-family:'ubuntu'">
         </div>
@@ -18,6 +18,7 @@
         <div class="form-group">
           <input type="text" name="password" class="form-control" id="password" placeholder="Masukan Password Anda." style="height:45px;font-size:16px;font-family:'ubuntu'">
         </div>
+          <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
           <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Creating account..." class="penandaku-btn-register btn btn-success btn-lg">Sign up for Penandaku.com</button>
           <span class="penandaku-note-register text-center">
             Dengan mengeklik "Sign up for Penandaku.com", berarti anda menyetujui

@@ -44,49 +44,95 @@ class Web extends CI_Controller {
       //check dengan form validation
       $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|min_length[4]|max_length[25]|alpha_dash');
 			$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[5]|max_length[40]');
-        //check status form validation
-        if($this->form_validation->run() == TRUE){
-          //get form data
-          $username = $this->input->post('', TRUE);
-          $password = SHA1(MD5(MD5(SHA1($this->input->post('password', TRUE)))));
-          //checking data via model
-          $checking = $this->member->login('tbl_member', array('username' => $username), array('password' => $password));
-          //status
-          if($checking != FALSE){
-            //loop data
-            foreach($checking as $member){
-              //check aktivasi email
-              if($member->verifikasi_email === 0){
+      //check status form validation
+      if($this->form_validation->run() == TRUE){
+      //get form data
+      $username = $this->input->post('', TRUE);
+      $password = SHA1(MD5(MD5(SHA1($this->input->post('password', TRUE)))));
+      //checking data via model
+      $checking = $this->member->login('tbl_member', array('username' => $username), array('password' => $password));
+      //status
+      if($checking != FALSE){
+          //loop data
+          foreach($checking as $member){
+            //check aktivasi email
+            if($member->verifikasi_email === 0){
                 $this->load->view('layout/auth/verifikasi_email');
-              }else{
-                $this->session->set_userdata(array(
-                    'member_id' => $member->id_memer,
-                    'username'  => $member->username,
-                    'password'  => $member->password,
-                    'nama'      => $member->nama
-                ));
-                redirect('member/dashboard');
-              }
+            }else{
+              $this->session->set_userdata(array(
+                  'member_id' => $member->id_memer,
+                  'username'  => $member->username,
+                  'password'  => $member->password,
+                  'nama'      => $member->nama
+              ));
+              redirect('member/dashboard');
             }
-          }else{
-            //create data array
-            $data = array(
-                      'error' => '<div class="alert alert-danger">
-                                    <strong>FAILED!</strong> Username atau Password Anda salah.
-                                  </div>'
-            );
-            $this->load->view('layout/auth/login', $data);
           }
         }else{
           //create data array
-          $data = array (
-                    'title'         => 'Masuk - Penandaku.com',
-                    'descriptions'  => '',
-                    'keywords'      => ''
+          $data = array(
+                    'error' => '<div class="alert alert-danger">
+                                    <strong>FAILED!</strong> Username atau Password Anda salah.
+                                  </div>'
           );
           $this->load->view('layout/auth/login', $data);
         }
+      }else{
+        //create data array
+        $data = array (
+                  'title'         => 'Masuk - Penandaku.com',
+                  'descriptions'  => '',
+                  'keywords'      => ''
+        );
+        $this->load->view('layout/auth/login', $data);
+      }
     }
   }
 
+  public function join()
+  {
+    //check dengan form validation
+    $this->form_validation->set_rules('nama', 'Nama', 'trim|required|xss_clean|min_length[4]|max_length[100]|alpha_dash');
+    $this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean|min_length[5]|max_length[100]|valid_email');
+    $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|min_length[4]|max_length[25]|alpha_dash');
+    $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[5]|max_length[40]');
+    //status
+    if($this->form_validation->run() == TRUE)
+    {
+      //checking username, apakah sudah terdaftar ?
+      $checking_username = $this->member->checking_data('tbl_member', array('username' => $this->input->post('username', TRUE)));
+      //checking email, apakah sudah terdaftar ?
+      $checking_email    = $this->member->checking_data('tbl_member', array('email' => $this->input->post('email', TRUE)));
+      if($checking_username != FALSE){
+        //set data error array
+        $data = array (
+                  'error' => '<div class="alert alert-danger">
+                                 username yang anda masukan sudah terdaftar.
+                              </div>'
+        );
+        $this->load->view('layout/auth/join', $data);
+
+      }elseif($checking_email != FALSE){
+        //set data error array
+        $data = array (
+                  'error' => '<div class="alert alert-danger">
+                                 email address yang anda masukan sudah terdaftar.
+                              </div>'
+        );
+        $this->load->view('layout/auth/join', $data);
+      }else{
+        //var insert array
+        $insert = array(
+                    'nama'        => '',
+                    'username'    => '',
+                    'password'    => '',
+                    'email'       => ''
+        );
+        $this->member->insert_join('tbl_member', $insert);
+        //code send email here !
+      }
+    }else{
+      $this->load->view('layout/auth/join');
+    }
+  }
 }

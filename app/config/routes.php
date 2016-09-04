@@ -53,5 +53,7 @@ $route['default_controller'] = 'web';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-//routing Web
+//routing login
 $route['login'] = 'web/login';
+//routing join
+$route['join']  = 'web/join';
