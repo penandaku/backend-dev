@@ -63,4 +63,11 @@ class Member extends CI_Model
 	}
 	/* end fungsi checking data */
 
+	/* fungsi insert join */
+	function insert_join($table,$data)
+	{
+		$this->db->insert($table,$data);
+	}
+	/* end fungsi insert join */
+
 }
