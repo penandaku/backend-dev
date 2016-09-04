@@ -14,6 +14,7 @@ class Member extends CI_Model
 		parent::__construct();
 	}
 
+	/* fungsi login auth */
 	function login($table,$field1,$field2)
 	{
 		$this->db->select('*');
@@ -28,7 +29,9 @@ class Member extends CI_Model
 			return $query->result();
 		}
 	}
+	/* end fungsi login auth */
 
+	/* fungsi restrict halaman */
   function member_id()
   {
     return $this->session->userdata('member_id');
@@ -43,5 +46,21 @@ class Member extends CI_Model
   {
     return $this->session->userdata('password');
   }
+	/* end fungsi restrict */
+
+	/* fungsi checking data */
+	function checking_data($table,$where)
+	{
+		$this->db->select('*');
+		$this->db->from($table);
+		$this->db->where($where);
+		$query = $this->db->get();
+		if ($query->num_rows() == 0) {
+			return FALSE;
+		} else {
+			return $query->result();
+		}
+	}
+	/* end fungsi checking data */
 
 }
