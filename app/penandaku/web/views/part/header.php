@@ -30,20 +30,26 @@
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <?php
-            $attributes = array('id' => 'frm_login', 'class' => 'navbar-form navbar-right');
-            echo form_open('login/', $attributes)
-            ?>
-              <div class="form-group">
-                <input type="text" name="username" placeholder="Username or Email" class="form-control">
-              </div>
-              <div class="form-group">
-                <input type="password" name="password" placeholder="Password" class="form-control">
-              </div>
-              <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-              <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Signing in..." class="penandaku-login btn btn-default" style="font-family:ubuntu">Sign in</button>
-              <a href="<?php print base_url() ?>join?source=header&utf8=✓" type="submit" class="btn btn-success" style="font-family:ubuntu">Sign up</a>
-            <?php echo form_close(); ?>
+          <?php if($this->session->userdata('member_id')) { ?>
+
+          <?php }elseif($this->session->userdata('auth_id')) { ?>
+
+          <?php }else{ ?>
+            <?php
+              $attributes = array('id' => 'frm_login', 'class' => 'navbar-form navbar-right');
+              echo form_open('login/', $attributes)
+              ?>
+                <div class="form-group">
+                  <input type="text" name="username" placeholder="Username or Email" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="password" name="password" placeholder="Password" class="form-control">
+                </div>
+                <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
+                <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Signing in..." class="penandaku-login btn btn-default" style="font-family:ubuntu">Sign in</button>
+                <a href="<?php print base_url() ?>join?source=header&utf8=✓" type="submit" class="btn btn-success" style="font-family:ubuntu">Sign up</a>
+              <?php echo form_close(); ?>
+         <?php } ?>
         </div>
       </div>
     </nav>
