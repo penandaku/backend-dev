@@ -21,7 +21,7 @@
       </div>
       <div class="col-md-4">
         <div class="login-logo">
-            <img src="<?php echo cdn('img/2.svg') ?>" style="width:300px;margin-bottom:10px">
+            <img src="<?php echo cdn('img/2.svg') ?>" style="width:300px;margin-bottom:20px">
         </div>
           <div class="error-login">
             <?php if(isset($error)) { echo $error; }; ?>
