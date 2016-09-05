@@ -16,7 +16,6 @@ body {
 .penandaku-logo {
   margin-top: 7px;
   height: 40px;
-  width: 200px;
 }
 
 .penandaku-form {
@@ -103,7 +102,7 @@ body {
 }
 
 .main-footer {
-  padding-bottom: 100px;
+  padding-bottom: 120px;
       background-color: #fff;
       background-image: url(https://fbcdn-dragon-a.akamaihd.net/hphotos-ak-xaf1/t39.2365-6/11057196_396547827217374_525513866_n.png);
       background-size: 980px auto;
@@ -215,4 +214,9 @@ body {
 
 .error-login {
   font-family: 'ubuntu';
+}
+
+.button-verify {
+  text-align: center;
+  margin-top: 10px;
 }

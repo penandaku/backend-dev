@@ -44,7 +44,7 @@
               </li>
             </ul>
           <?php }elseif($this->session->userdata('auth_id')) { ?>
-
+              menu administrator
           <?php }else{ ?>
             <?php
               $attributes = array('id' => 'frm_login', 'class' => 'navbar-form navbar-right');

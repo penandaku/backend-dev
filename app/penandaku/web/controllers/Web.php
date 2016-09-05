@@ -71,7 +71,7 @@ class Web extends CI_Controller {
                     'password'    => '',
                     'email'       => ''
         );
-        $this->member->insert_join('tbl_member', $insert);
+        $this->member->insert('tbl_member', $insert);
         //code send email here !
       }
     }else{

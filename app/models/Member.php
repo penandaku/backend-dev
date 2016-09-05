@@ -64,10 +64,17 @@ class Member extends CI_Model
 	/* end fungsi checking data */
 
 	/* fungsi insert join */
-	function insert_join($table,$data)
+	function insert($table,$data)
 	{
 		$this->db->insert($table,$data);
 	}
 	/* end fungsi insert join */
+
+	/* fungsi logout */
+	function logout()
+	{
+		$this->session->sess_destroy();
+	}
+	/* end fungsi logout */
 
 }

@@ -48,14 +48,20 @@ class Login extends CI_Controller {
           //loop data
           foreach($checking as $member){
             //check aktivasi email
-            if($member->verifikasi_email === ''){
-                $this->load->view('layout/auth/verifikasi_email');
+            if($member->verifikasi_email == 0){
+                $data = array(
+                          'email'         => $member->email,
+                          'title'         => 'Verifikasi Email - Penandaku.com',
+                          'descriptions'  => '',
+                          'keywords'      => ''
+                );
+                $this->load->view('layout/auth/verifikasi_email', $data);
             }else{
               $this->session->set_userdata(array(
-                  'member_id' => $member->id_memer,
+                  'member_id' => $member->id_member,
                   'username'  => $member->username,
                   'password'  => $member->password,
-                  'nama'      => $member->nama
+                  'nama'      => $member->nama_member
               ));
               redirect('member/dashboard');
             }
