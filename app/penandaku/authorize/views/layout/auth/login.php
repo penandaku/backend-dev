@@ -16,10 +16,13 @@
     <script src="<?php print cdn('js/ie-emulation-modes-warning.js') ?>"></script>
   </head>
   <body style="background-color:#f9f9f9">
-    <div class="container" style="margin-top:150px">
+    <div class="container" style="margin-top:80px">
       <div class="col-md-4">
       </div>
       <div class="col-md-4">
+        <div class="login-logo">
+            <img src="<?php echo cdn('img/2.svg') ?>" style="width:300px;margin-bottom:10px">
+        </div>
           <div class="error-login">
             <?php if(isset($error)) { echo $error; }; ?>
           </div>
