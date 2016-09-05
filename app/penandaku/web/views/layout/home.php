@@ -1,8 +1,8 @@
 <div class="jumbotron" style="background-image: url('<?php print cdn('img/bg.jpg') ?>'); position:relative;background-color:#1abc9c">
   <div class="container" style="color:#fff;margin-top:15px">
     <div class="col-md-8">
-    <h2 style="font-family: 'Lato'; font-weight:bold;font-size:40px">Simple Apps for Save and Access <br> Bookmark online.</h2>
-    <p style="font-family: 'Lato'; font-weight:bold;font-size:25px">Simpan dan Akses Bookmark Anda secara online dimana dan kapanpun saja secara mudah.</p>
+    <h2 style="font-family: 'Roboto'; font-weight:bold;font-size:40px">Simple Apps for Save and Access <br> Bookmark online.</h2>
+    <p style="font-family: 'Roboto'; font-weight:bold;font-size:25px">Simpan dan Akses Bookmark Anda secara online dimana dan kapanpun saja secara mudah.</p>
     </div>
     <div class="col-md-4">
       <?php
@@ -45,8 +45,8 @@
   </div>
   <div class="penandaku-batas"></div>
   <div class="row">
-    <div class="col-md-9" style="font-family:'ubuntu'">
-        <h3>Tentang Kami</h3>
+    <div class="col-md-9" style="font-family:'Ubuntu';font-weight:normal">
+        <h2>Tentang Kami</h2>
         <p>Penandaku adalah perusahaan penyedia layanan penyimpanan bookmark secara online, sehingga anda tidak perlu kawatir menyimpan dan mengakses bookmark anda dimanapun dan kapanpun saja.</p>
     </div>
     <div class="col-md-3">
