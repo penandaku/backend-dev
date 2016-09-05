@@ -1,8 +1,8 @@
 <div class="jumbotron" style="background-image: url('<?php print cdn('img/bg.jpg') ?>'); position:relative;background-color:#1abc9c">
   <div class="container" style="color:#fff;margin-top:15px">
     <div class="col-md-8">
-    <h2 style="font-family: 'ubuntu'; font-weight:normal;font-size:40px">Simple Apps for Save and Access <br> Bookmark online.</h2>
-    <p style="font-family: 'ubuntu'; font-weight:inherit;font-size:25px">Simpan dan Akses Bookmark Anda secara online dimana dan kapanpun saja secara mudah.</p>
+    <h2 style="font-family: 'Lato'; font-weight:bold;font-size:40px">Simple Apps for Save and Access <br> Bookmark online.</h2>
+    <p style="font-family: 'Lato'; font-weight:bold;font-size:25px">Simpan dan Akses Bookmark Anda secara online dimana dan kapanpun saja secara mudah.</p>
     </div>
     <div class="col-md-4">
       <?php
