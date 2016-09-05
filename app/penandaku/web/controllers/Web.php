@@ -20,82 +20,21 @@ class Web extends CI_Controller {
 
   public function index()
   {
-    //create data array
-    $data = array (
-              'title'         => 'Penandaku.com - Simple Apps for Save and Access Bookmark online.',
-              'descriptions'  => '',
-              'keywords'      => ''
-    );
-    //parse view dengan array data
-    $this->load->view('part/header',$data);
-    $this->load->view('layout/home');
-    $this->load->view('part/footer');
-  }
-
-  public function login()
-  {
-    //jika memang session sudah terdaftar, alihkan ke dashboard
-    if($this->member->username() && $this->member->password())
-    {
-      //alihkan dashboard
-      redirect('member/dashboard');
-
-    }else{
-      //check dengan form validation
-      $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|min_length[4]|max_length[25]|alpha_dash');
-			$this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[5]|max_length[40]');
-      //check status form validation
-      if($this->form_validation->run() == TRUE){
-      //get form data
-      $username = $this->input->post('', TRUE);
-      $password = SHA1(MD5(MD5(SHA1($this->input->post('password', TRUE)))));
-      //checking data via model
-      $checking = $this->member->login('tbl_member', array('username' => $username), array('password' => $password));
-      //status
-      if($checking != FALSE){
-          //loop data
-          foreach($checking as $member){
-            //check aktivasi email
-            if($member->verifikasi_email === 0){
-                $this->load->view('layout/auth/verifikasi_email');
-            }else{
-              $this->session->set_userdata(array(
-                  'member_id' => $member->id_memer,
-                  'username'  => $member->username,
-                  'password'  => $member->password,
-                  'nama'      => $member->nama
-              ));
-              redirect('member/dashboard');
-            }
-          }
-        }else{
-          //create data array
-          $data = array(
-                    'error' => '<div class="alert alert-danger">
-                                    <strong>FAILED!</strong> Username atau Password Anda salah.
-                                  </div>'
-          );
-          $this->load->view('layout/auth/login', $data);
-        }
-      }else{
-        //create data array
-        $data = array (
-                  'title'         => 'Masuk - Penandaku.com',
-                  'descriptions'  => '',
-                  'keywords'      => ''
-        );
-        $this->load->view('layout/auth/login', $data);
-      }
-    }
-  }
-
-  public function join()
-  {
     //check dengan form validation
-    $this->form_validation->set_rules('nama', 'Nama', 'trim|required|xss_clean|min_length[4]|max_length[100]|alpha_dash');
-    $this->form_validation->set_rules('email', 'Email', 'trim|required|xss_clean|min_length[5]|max_length[100]|valid_email');
-    $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean|min_length[4]|max_length[25]|alpha_dash');
-    $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|min_length[5]|max_length[40]');
+    $this->form_validation->set_rules('nama', 'Nama', 'trim|required|min_length[4]');
+    $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
+    $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[3]');
+    $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');
+    //set message
+    $this->form_validation->set_message('required', '<div class="alert alert-danger" style="font-family:ubuntu">
+                                                        <i class="fa fa-exclamation-circle"></i> {field} harus diisi.
+                                                     </div>');
+    $this->form_validation->set_message('min_length', '<div class="alert alert-danger" style="font-family:ubuntu">
+                                                        <i class="fa fa-exclamation-circle"></i> {field} tidak boleh kurang dari {param} karakter.
+                                                       </div>');
+    $this->form_validation->set_message('valid_email', '<div class="alert alert-danger" style="font-family:ubuntu">
+                                                         <i class="fa fa-exclamation-circle"></i> Alamat {field} tidak valid.
+                                                        </div>');
     //status
     if($this->form_validation->run() == TRUE)
     {
@@ -107,19 +46,23 @@ class Web extends CI_Controller {
         //set data error array
         $data = array (
                   'error' => '<div class="alert alert-danger">
-                                 username yang anda masukan sudah terdaftar.
+                                 <i class="fa fa-exclamation-circle"></i> username yang anda masukan sudah terdaftar.
                               </div>'
         );
-        $this->load->view('layout/auth/join', $data);
+        $this->load->view('part/header',$data);
+        $this->load->view('layout/home');
+        $this->load->view('part/footer');
 
       }elseif($checking_email != FALSE){
         //set data error array
         $data = array (
                   'error' => '<div class="alert alert-danger">
-                                 email address yang anda masukan sudah terdaftar.
+                                 <i class="fa fa-exclamation-circle"></i> email address yang anda masukan sudah terdaftar.
                               </div>'
         );
-        $this->load->view('layout/auth/join', $data);
+        $this->load->view('part/header',$data);
+        $this->load->view('layout/home');
+        $this->load->view('part/footer');
       }else{
         //var insert array
         $insert = array(
@@ -132,7 +75,30 @@ class Web extends CI_Controller {
         //code send email here !
       }
     }else{
-      $this->load->view('layout/auth/join');
+      //create data array
+      $data = array (
+                'title'         => 'Penandaku.com - Simple Apps for Save and Access Bookmark online.',
+                'descriptions'  => '',
+                'keywords'      => ''
+      );
+      //parse view dengan array data
+      $this->load->view('part/header',$data);
+      $this->load->view('layout/home');
+      $this->load->view('part/footer');
     }
+  }
+
+  public function about()
+  {
+    //create data array
+    $data = array (
+              'title'         => 'About - Penandaku.com',
+              'descriptions'  => '',
+              'keywords'      => ''
+    );
+    //parse view dengan array data
+    $this->load->view('part/header',$data);
+    $this->load->view('layout/about');
+    $this->load->view('part/footer');
   }
 }

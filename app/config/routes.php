@@ -57,3 +57,13 @@ $route['translate_uri_dashes'] = FALSE;
 $route['login'] = 'web/login';
 //routing join
 $route['join']  = 'web/join';
+//routing about
+$route['about'] = 'web/about';
+//routing feedback
+$route['feedback'] = 'web/pages/feedback';
+//routing bug
+$route['bug']      = 'web/pages/bug';
+//routing terms
+$route['terms']    = 'web/pages/terms';
+//routing policies
+$route['policies'] = 'web/pages/policies';

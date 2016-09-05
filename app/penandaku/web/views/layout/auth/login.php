@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Fika Ridaul Maulayya">
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="<?php print cdn('img/favicon.png') ?>">
     <title><?php print $title ?></title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100">
     <link rel="stylesheet" href="<?php print cdn('css/font-awesome/css/font-awesome.css') ?>">
@@ -20,21 +20,28 @@
       <div class="col-md-4">
       </div>
       <div class="col-md-4">
+        <div class="error-login">
+          <?php if(isset($error)) { echo $error; }; ?>
+        </div>
           <div class="panel panel-default" style="font-family:'ubuntu'">
             <div class="panel-body">
-              <?php if(isset($error)) { echo $error; }; ?>
-              <form role="form" action="<?php print base_url() ?>login/" method="POST" accept-charset="utf-8">
+              <?php
+                $attributes = array('id' => 'frm_login');
+                echo form_open('login/', $attributes)
+                ?>
                 <div class="form-group">
-                  <label style="font-weight:normal" for="exampleInputEmail1">Username or Email</label>
-                  <input type="text" name="username" class="form-control" placeholder="Enter username or email">
+                  <label style="font-weight:normal">Username or Email</label>
+                  <input type="text" name="username" class="form-control" value="<?php echo set_value('username') ?>" placeholder="Enter username or email">
+                  <?php echo form_error('username'); ?>
                 </div>
                 <div class="form-group">
-                  <label style="font-weight:normal" for="exampleInputPassword1">Password <a href="/sessions/forgot_password">(forgot password)</a></label>
-                  <input type="password" name="password" class="form-control"  placeholder="Enter Password">
+                  <label style="font-weight:normal">Password <a href="/sessions/forgot_password">(forgot password)</a></label>
+                  <input type="password" name="password" class="form-control" value="<?php echo set_value('password') ?>" placeholder="Enter Password">
+                  <?php echo form_error('password'); ?>
                 </div>
                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
                 <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Signing in..." class="penandaku-btn-login btn btn-sm btn-success">Sign in</button>
-              </form>
+              <?php echo form_close(); ?>
             </div>
         </div>
         <div class="create-account" style="font-family:'ubuntu'">

@@ -6,15 +6,15 @@ body {
 
 .penandaku-navbar {
   background-color: #f5f5f5;
-    color: #333;
-    border-bottom: 1px solid #e5e5e5;
-    font-family: 'ubuntu';
-    font-weight: initial;
-    font-size: 15px;
+  color: #333;
+  border-bottom: 1px solid #e5e5e5;
+  font-family: 'ubuntu';
+  font-weight: initial;
+  font-size: 15px;
 }
 
 .penandaku-logo {
-  margin-top: 8px;
+  margin-top: 12px;
 }
 
 .penandaku-form {
@@ -128,4 +128,89 @@ body {
   left: 50%;
   top: 50%;
   z-index: 100;
+}
+
+.about-page {
+  padding-top: 350px;
+  padding-bottom: 48px;
+  margin-bottom: 30px;
+  color: inherit;
+}
+
+.feedback-page {
+  padding-top: 35px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+}
+
+.feedback-title-top {
+  font-family: 'ubuntu';
+  font-size: 40px;
+  color: #fff;
+}
+
+.feedback-descriptions-top {
+  font-family: 'ubuntu';
+  font-size: 20px;
+  color: #fff;
+}
+
+.feedback-title {
+  font-family: 'ubuntu';
+  color: #333;
+}
+
+.feedback-descriptions {
+  font-family: 'ubuntu';
+  color: #333;
+}
+
+.bug-page {
+  padding-top: 35px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  color: inherit;
+}
+
+.bug-title-top {
+  font-family: 'ubuntu';
+  font-size: 40px;
+  color: #fff;
+}
+
+.bug-descriptions-top {
+  font-family: 'ubuntu';
+  font-size: 20px;
+  color: #fff;
+}
+
+.bug-title {
+  font-family: 'ubuntu';
+  color: #333;
+}
+
+.bug-descriptions {
+  font-family: 'ubuntu';
+  color: #333;
+}
+
+.statics-page {
+  padding-top: 35px;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  color: inherit;
+}
+
+.statics-title {
+  font-family: 'ubuntu';
+  color: #333;
+}
+
+.login-logo {
+  text-align: center;
+}
+
+.error-login {
+  font-family: 'ubuntu';
 }
