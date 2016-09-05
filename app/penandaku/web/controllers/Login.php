@@ -48,7 +48,7 @@ class Login extends CI_Controller {
           //loop data
           foreach($checking as $member){
             //check aktivasi email
-            if($member->verifikasi_email === 0){
+            if($member->verifikasi_email === ''){
                 $this->load->view('layout/auth/verifikasi_email');
             }else{
               $this->session->set_userdata(array(
