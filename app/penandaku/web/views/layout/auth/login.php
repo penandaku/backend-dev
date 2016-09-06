@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Fika Ridaul Maulayya">
-    <link rel="icon" href="<?php print cdn('img/favicon.png') ?>">
+    <link rel="icon" href="<?php print cdn('img/home.svg') ?>">
     <title><?php print $title ?></title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="<?php print cdn('css/font-awesome/css/font-awesome.css') ?>">
     <link rel="stylesheet" href="<?php print cdn('css/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?php print cdn('css/ie10-viewport-bug-workaround.css') ?>">
@@ -16,12 +16,12 @@
     <script src="<?php print cdn('js/ie-emulation-modes-warning.js') ?>"></script>
   </head>
   <body style="background-color:#f9f9f9">
-    <div class="container" style="margin-top:80px">
+    <div class="container" style="margin-top:40px">
       <div class="col-md-4">
       </div>
       <div class="col-md-4">
         <div class="login-logo">
-            <img src="<?php echo cdn('img/2.svg') ?>" style="width:300px;margin-bottom:20px">
+            <img src="<?php echo cdn('img/home.svg') ?>" style="width:120px;margin-bottom:20px">
         </div>
         <div class="error-login">
           <?php if(isset($error)) { echo $error; }; ?>

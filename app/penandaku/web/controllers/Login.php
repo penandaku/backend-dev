@@ -63,7 +63,7 @@ class Login extends CI_Controller {
                   'password'  => $member->password,
                   'nama'      => $member->nama_member
               ));
-              redirect('member/dashboard');
+              redirect('/');
             }
           }
         }else{
