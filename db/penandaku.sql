@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 06, 2016 at 03:35 
+-- Generation Time: Sep 06, 2016 at 04:06 
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.8
 
@@ -32,6 +32,18 @@ CREATE TABLE `tbl_bookmark` (
   `slug` varchar(150) NOT NULL,
   `url` varchar(150) NOT NULL,
   `catatan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_group`
+--
+
+CREATE TABLE `tbl_group` (
+  `member_id` int(11) NOT NULL,
+  `label_id` int(11) NOT NULL,
+  `bookmark_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -102,6 +114,14 @@ ALTER TABLE `tbl_bookmark`
   ADD PRIMARY KEY (`id_bookmark`);
 
 --
+-- Indexes for table `tbl_group`
+--
+ALTER TABLE `tbl_group`
+  ADD PRIMARY KEY (`member_id`,`label_id`,`bookmark_id`),
+  ADD KEY `label_id` (`label_id`),
+  ADD KEY `bookmark_id` (`bookmark_id`);
+
+--
 -- Indexes for table `tbl_label`
 --
 ALTER TABLE `tbl_label`
@@ -143,6 +163,18 @@ ALTER TABLE `tbl_member`
 --
 ALTER TABLE `tbl_user`
   MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tbl_group`
+--
+ALTER TABLE `tbl_group`
+  ADD CONSTRAINT `tbl_group_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `tbl_member` (`id_member`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `tbl_group_ibfk_2` FOREIGN KEY (`label_id`) REFERENCES `tbl_label` (`id_label`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `tbl_group_ibfk_3` FOREIGN KEY (`bookmark_id`) REFERENCES `tbl_bookmark` (`id_bookmark`) ON UPDATE CASCADE;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
