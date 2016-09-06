@@ -26,13 +26,13 @@ class Join extends CI_Controller {
     $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[3]');
     $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');
     //set message
-    $this->form_validation->set_message('required', '<div class="alert alert-danger" style="font-family:ubuntu">
+    $this->form_validation->set_message('required', '<div class="alert alert-danger" style="font-family:Roboto">
                                                         <i class="fa fa-exclamation-circle"></i> {field} harus diisi.
                                                      </div>');
-    $this->form_validation->set_message('min_length', '<div class="alert alert-danger" style="font-family:ubuntu">
+    $this->form_validation->set_message('min_length', '<div class="alert alert-danger" style="font-family:Roboto">
                                                         <i class="fa fa-exclamation-circle"></i> {field} tidak boleh kurang dari {param} karakter.
                                                        </div>');
-    $this->form_validation->set_message('valid_email', '<div class="alert alert-danger" style="font-family:ubuntu">
+    $this->form_validation->set_message('valid_email', '<div class="alert alert-danger" style="font-family:Roboto">
                                                          <i class="fa fa-exclamation-circle"></i> Alamat {field} tidak valid.
                                                         </div>');
     //status

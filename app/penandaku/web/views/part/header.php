@@ -26,7 +26,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="penandaku-logo-navbar" href="<?php print base_url() ?>">
-               <img class="penandaku-logo" src="<?php print cdn('img/2.svg') ?>" alt="Penandaku.com - Simple Apps for Save and Access <br> Bookmark online" />
+               <img class="penandaku-logo" src="<?php print cdn('img/wew.svg') ?>" alt="Penandaku.com - Simple Apps for Save and Access <br> Bookmark online" />
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
