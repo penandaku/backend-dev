@@ -57,8 +57,8 @@
                   <input type="password" name="password" placeholder="Password" class="form-control">
                 </div>
                 <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-                <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Signing in..." class="penandaku-login btn btn-default" style="font-family:ubuntu">Sign in</button>
-                <a href="<?php print base_url() ?>join?source=header&utf8=✓" type="submit" class="btn btn-success" style="font-family:ubuntu">Sign up</a>
+                <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Signing in..." class="penandaku-login btn btn-default" style="font-family:Roboto;font-weight:normal">Sign in</button>
+                <a href="<?php print base_url() ?>join?source=header&utf8=✓" type="submit" class="btn btn-success" style="font-family:Roboto;font-weight:normal">Sign up</a>
               <?php echo form_close(); ?>
          <?php } ?>
         </div>

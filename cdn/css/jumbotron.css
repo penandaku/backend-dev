@@ -1,4 +1,37 @@
 /* Move down content because we have a fixed navbar that is 50px tall */
+
+/*********************
+  Roboto font
+**********************/
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/roboto/Roboto-Thin.woff2") format("woff2"), url("../font/roboto/Roboto-Thin.woff") format("woff"), url("../font/roboto/Roboto-Thin.html") format("truetype");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/roboto/Roboto-Light.woff2") format("woff2"), url("../font/roboto/Roboto-Light.woff") format("woff"), url("../font/roboto/Roboto-Light.html") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/roboto/Roboto-Regular.woff2") format("woff2"), url("../font/roboto/Roboto-Regular.woff") format("woff"), url("../font/roboto/Roboto-Regular.html") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/roboto/Roboto-Medium.woff2") format("woff2"), url("../font/roboto/Roboto-Medium.woff") format("woff"), url("../font/roboto/Roboto-Medium.html") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../font/roboto/Roboto-Bold.woff2") format("woff2"), url("../font/roboto/Roboto-Bold.woff") format("woff"), url("../font/roboto/Roboto-Bold.html") format("truetype");
+  font-weight: 700;
+}
 body {
   padding-top: 50px;
   padding-bottom: 7px;
@@ -8,8 +41,8 @@ body {
   background-color: #f5f5f5;
   color: #333;
   border-bottom: 1px solid #e5e5e5;
-  font-family: 'ubuntu';
-  font-weight: initial;
+  font-family: 'Roboto';
+  font-weight: normal;
   font-size: 15px;
 }
 
@@ -20,14 +53,14 @@ body {
 
 .penandaku-form {
   height: 45px;
-  font-family: 'ubuntu';
+  font-family: 'Roboto';
 }
 
 .penandaku-btn-register {
   padding: 0.55em 1em;
     font-family: 'Roboto';
     font-size: 15px;
-    font-weight: bold;
+    font-weight: normal;
     line-height: 2.5;
     color: #fff;
     width: 100%;
@@ -76,14 +109,14 @@ body {
 }
 
 .penandaku-note-register {
-  font-family: Ubuntu, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
+  font-family: Roboto;
   font-size: 13px;
   line-height: 1.4;
   color: #555;
 }
 
 .penandaku-tentang {
-  font-family: 'ubuntu';
+  font-family: 'Roboto';
 }
 
 .penandaku-tentang-image {
@@ -146,24 +179,24 @@ body {
 }
 
 .feedback-title-top {
-  font-family: 'ubuntu';
+  font-family: 'Roboto';
   font-size: 40px;
   color: #fff;
 }
 
 .feedback-descriptions-top {
-  font-family: 'ubuntu';
+  font-family: 'Roboto';
   font-size: 20px;
   color: #fff;
 }
 
 .feedback-title {
-  font-family: 'ubuntu';
+  font-family: 'Roboto';
   color: #333;
 }
 
 .feedback-descriptions {
-  font-family: 'ubuntu';
+  font-family: 'Roboto';
   color: #333;
 }
 
@@ -175,24 +208,24 @@ body {
 }
 
 .bug-title-top {
-  font-family: 'ubuntu';
+  font-family: 'Roboto';
   font-size: 40px;
   color: #fff;
 }
 
 .bug-descriptions-top {
-  font-family: 'ubuntu';
+  font-family: 'Roboto';
   font-size: 20px;
   color: #fff;
 }
 
 .bug-title {
-  font-family: 'ubuntu';
+  font-family: 'Roboto';
   color: #333;
 }
 
 .bug-descriptions {
-  font-family: 'ubuntu';
+  font-family: 'Roboto';
   color: #333;
 }
 
@@ -204,7 +237,7 @@ body {
 }
 
 .statics-title {
-  font-family: 'ubuntu';
+  font-family: 'Roboto';
   color: #333;
 }
 
@@ -213,7 +246,7 @@ body {
 }
 
 .error-login {
-  font-family: 'ubuntu';
+  font-family: 'Roboto';
 }
 
 .button-verify {

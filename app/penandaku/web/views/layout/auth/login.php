@@ -26,7 +26,7 @@
         <div class="error-login">
           <?php if(isset($error)) { echo $error; }; ?>
         </div>
-          <div class="panel panel-default" style="font-family:'ubuntu'">
+          <div class="panel panel-default" style="font-family:'Roboto'">
             <div class="panel-body">
               <?php
                 $attributes = array('id' => 'frm_login');
@@ -47,7 +47,7 @@
               <?php echo form_close(); ?>
             </div>
         </div>
-        <div class="create-account" style="font-family:'ubuntu'">
+        <div class="create-account" style="font-family:'Roboto'">
           Daftar gratis ! <a href="">Buat akun baru</a>.
         </div>
       </div>

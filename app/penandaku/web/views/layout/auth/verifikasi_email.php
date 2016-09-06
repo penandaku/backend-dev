@@ -16,14 +16,14 @@
     <script src="<?php print cdn('js/ie-emulation-modes-warning.js') ?>"></script>
   </head>
   <body style="background-color:#f9f9f9">
-    <div class="container" style="margin-top:150px">
+    <div class="container" style="margin-top:40px">
       <div class="col-md-4">
       </div>
       <div class="col-md-4">
         <div class="login-logo">
-            <img src="<?php echo cdn('img/2.svg') ?>" style="width:300px;margin-bottom:20px">
+            <img src="<?php echo cdn('img/home.svg') ?>" style="width:120px;margin-bottom:20px">
         </div>
-        <div class="create-account" style="font-family:'ubuntu'">
+        <div class="create-account" style="font-family:'Roboto'">
           Silahkan cek email <b><?php echo $email ?></b> untuk mengaktifkan akun Anda.
         </div>
         <div class="button-verify">

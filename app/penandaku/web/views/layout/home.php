@@ -1,8 +1,8 @@
 <div class="jumbotron" style="background-image: url('<?php print cdn('img/bg.jpg') ?>'); position:relative;background-color:#1abc9c">
   <div class="container" style="color:#fff;margin-top:15px">
     <div class="col-md-8">
-    <h2 style="font-family: 'Roboto'; font-weight:bold;font-size:40px">Simple Apps for Save and Access <br> Bookmark online.</h2>
-    <p style="font-family: 'Roboto'; font-weight:bold;font-size:25px">Simpan dan Akses Bookmark Anda secara online dimana dan kapanpun saja secara mudah.</p>
+    <h2 style="font-family: 'Roboto'; font-weight:300;font-size:40px">Simple Apps for Save and Access <br> Bookmark online.</h2>
+    <p style="font-family: 'Roboto'; font-weight:300;font-size:25px">Simpan dan Akses Bookmark Anda secara online dimana dan kapanpun saja secara mudah.</p>
     </div>
     <div class="col-md-4">
       <?php
@@ -10,19 +10,19 @@
         echo form_open(base_url('/'), $attributes)
         ?>
         <div class="form-group">
-          <input type="text" name="nama" class="form-control" value="<?php echo set_value('nama') ?>" id="nama" placeholder="Masukan Nama Anda."  style="height:45px;font-size:16px;font-family:'Roboto';font-weight:bold">
+          <input type="text" name="nama" class="form-control" value="<?php echo set_value('nama') ?>" id="nama" placeholder="Masukan Nama Anda."  style="height:45px;font-size:16px;font-family:'Roboto';font-weight:normal">
           <?php echo form_error('nama'); ?>
         </div>
         <div class="form-group">
-          <input type="text" name="username" class="form-control" value="<?php echo set_value('username') ?>" id="username" placeholder="Masukan Username Anda." style="height:45px;font-size:16px;font-family:'Roboto';font-weight:bold">
+          <input type="text" name="username" class="form-control" value="<?php echo set_value('username') ?>" id="username" placeholder="Masukan Username Anda." style="height:45px;font-size:16px;font-family:'Roboto';font-weight:normal">
           <?php echo form_error('username'); ?>
         </div>
         <div class="form-group">
-          <input type="email" name="email" class="form-control" value="<?php echo set_value('email') ?>" id="email" placeholder="Masukan Email Anda." style="height:45px;font-size:16px;font-family:'Roboto';font-weight:bold">
+          <input type="email" name="email" class="form-control" value="<?php echo set_value('email') ?>" id="email" placeholder="Masukan Email Anda." style="height:45px;font-size:16px;font-family:'Roboto';font-weight:normal">
           <?php echo form_error('email'); ?>
         </div>
         <div class="form-group">
-          <input type="text" name="password" class="form-control" value="<?php echo set_value('password') ?>" id="password" placeholder="Masukan Password Anda." style="height:45px;font-size:16px;font-family:'Roboto';font-weight:bold">
+          <input type="text" name="password" class="form-control" value="<?php echo set_value('password') ?>" id="password" placeholder="Masukan Password Anda." style="height:45px;font-size:16px;font-family:'Roboto';font-weight:normal">
           <?php echo form_error('password'); ?>
         </div>
           <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
@@ -45,12 +45,12 @@
   </div>
   <div class="penandaku-batas"></div>
   <div class="row">
-    <div class="col-md-9" style="font-family:'Ubuntu';font-weight:normal">
+    <div class="col-md-9" style="font-family:'Roboto';font-weight:normal">
         <h2>Tentang Kami</h2>
         <p>Penandaku adalah perusahaan penyedia layanan penyimpanan bookmark secara online, sehingga anda tidak perlu kawatir menyimpan dan mengakses bookmark anda dimanapun dan kapanpun saja.</p>
     </div>
     <div class="col-md-3">
-      <img class="img-responsive" src="<?php print cdn('img/home.svg') ?>" style="width:300px">
+      <img class="img-responsive" src="<?php print cdn('img/home.svg') ?>" style="width:200px;margin-left:50px">
     </div>
   </div>
   <div class="penandaku-batas"></div>
@@ -58,7 +58,7 @@
     <div class="col-md-5">
       <img class="img-responsive" src="<?php print cdn('img/penandaku-laptop.png') ?>" style="width:500px">
     </div>
-    <div class="col-md-7" style="font-family:'ubuntu'">
+    <div class="col-md-7" style="font-family:'Roboto'">
         <h3>Bergabung Sebagai Pengembang</h3>
         <p>bergabunglah dengan para pengembang kami, guna mengembangkan penandaku.com agar lebih baik lagi kedepannya.</p>
         <button type="button" class="btn btn-success">Join Sebagai Pengembang</button>
