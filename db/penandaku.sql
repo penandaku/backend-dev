@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 06, 2016 at 04:06 
+-- Generation Time: Sep 06, 2016 at 04:46 
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.8
 
@@ -55,6 +55,7 @@ CREATE TABLE `tbl_group` (
 CREATE TABLE `tbl_label` (
   `id_label` int(225) NOT NULL,
   `nama_label` varchar(150) NOT NULL,
+  `slug` varchar(150) NOT NULL,
   `descriptions` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
