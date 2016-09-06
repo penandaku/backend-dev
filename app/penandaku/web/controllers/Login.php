@@ -21,7 +21,7 @@ class Login extends CI_Controller {
   public function index()
   {
     //jika memang session sudah terdaftar, alihkan ke dashboard
-    if($this->member->username() && $this->member->password())
+    if($this->member->member_id())
     {
       //alihkan dashboard
       redirect('member/dashboard');

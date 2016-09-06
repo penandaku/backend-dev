@@ -7,7 +7,7 @@
     <div class="col-md-4">
       <?php
         $attributes = array('id' => 'frm_login');
-        echo form_open(base_url('/'), $attributes)
+        echo form_open(base_url('join/'), $attributes)
         ?>
         <div class="form-group">
           <input type="text" name="nama" class="form-control" value="<?php echo set_value('nama') ?>" id="nama" placeholder="Masukan Nama Anda."  style="height:45px;font-size:16px;font-family:'Roboto';font-weight:normal">
