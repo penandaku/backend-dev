@@ -39,6 +39,7 @@
 <div id="loader" style="display:none">
    <img src="<?php print cdn('img/loader.svg') ?>" />
 </div>
+
 <div class="container">
   <div class="overlay-loader">
 

@@ -201,6 +201,8 @@ body {
 .feedback-descriptions {
   font-family: 'Roboto';
   color: #333;
+  font-weight: 300;
+  font-size: 17px;
 }
 
 .bug-page {
@@ -233,6 +235,8 @@ body {
 .bug-descriptions {
   font-family: 'Roboto';
   color: #333;
+  font-weight: 300;
+  font-size: 17px;
 }
 
 .statics-page {
@@ -245,6 +249,7 @@ body {
 .statics-title {
   font-family: 'Roboto';
   color: #333;
+  font-size: 20px;
 }
 
 .login-logo {
