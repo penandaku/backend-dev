@@ -1,4 +1,4 @@
-<div class="jumbotron" style="background-image: url('<?php print cdn('img/bg.jpg') ?>'); position:relative;background-color:#1abc9c">
+<div class="jumbotron" style="background-image: url('<?php print cdn('img/background.png') ?>'); position:relative;background-color:#1abc9c">
   <div class="container" style="color:#fff;margin-top:15px">
     <div class="col-md-8">
     <h2 style="font-family: 'Roboto'; font-weight:300;font-size:40px">Simple Apps for Save and Access <br> Bookmark online.</h2>
@@ -26,9 +26,9 @@
           <?php echo form_error('password'); ?>
         </div>
           <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-          <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Creating account..." class="penandaku-btn-register btn btn-success btn-lg">Sign up for Penandaku.com</button>
+          <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Creating account..." class="penandaku-btn-register btn btn-success btn-lg">Create Account</button>
           <span class="penandaku-note-register text-center">
-            Dengan mengeklik "Sign up for Penandaku.com", berarti anda menyetujui
+            Dengan mengeklik "Create Account", berarti anda menyetujui
             <a class="text-white" href="<?php print base_url() ?>terms/" target="_blank">layanan</a> and
             <a class="text-white" href="<?php print base_url() ?>policies/" target="_blank">kebijakan privacy</a>. <span class="js-email-notice">kami.</span>
           </span>

@@ -1,4 +1,4 @@
-<div class="feedback-page" style="background-image: url('<?php print cdn('img/bg.png') ?>'); position:relative;background-color:#2cb0a3">
+<div class="feedback-page" style="background-image: url('<?php print cdn('img/background.png') ?>'); position:relative;background-color:#1abc9c">
   <div class="container">
     <div class="col-md-8">
       <p class="feedback-title-top"><i class="fa fa-bell-o"></i> FeedBack </p>
@@ -29,19 +29,19 @@
         echo form_open('feedback/', $attributes)
         ?>
         <div class="form-group">
-          <label for="fullname" style="font-family:'ubuntu';font-weight:normal">
+          <label for="fullname" style="font-family:'Roboto';font-weight:normal">
               Nama Lengkap
           </label>
-          <input type="text" class="form-control" name="nama"  placeholder="Nama Lengkap" style="font-family:'ubuntu';font-weight:normal">
+          <input type="text" class="form-control" name="nama"  placeholder="Nama Lengkap" style="font-family:'Roboto';font-weight:normal">
         </div>
         <div class="form-group">
-          <label for="fullname" style="font-family:'ubuntu';font-weight:normal">
+          <label for="fullname" style="font-family:'Roboto';font-weight:normal">
               Email Aktif
           </label>
-          <input type="text" class="form-control" name="email"  placeholder="Email Aktif" style="font-family:'ubuntu';font-weight:normal">
+          <input type="text" class="form-control" name="email"  placeholder="Email Aktif" style="font-family:'Roboto';font-weight:normal">
         </div>
         <div class="form-group">
-          <label for="fullname" style="font-family:'ubuntu';font-weight:normal">
+          <label for="fullname" style="font-family:'Roboto';font-weight:normal">
               Pesan Feedback
           </label>
           <textarea class="form-control" name="pesan" rows="6"  placeholder="Masukan Pesan Feedback Anda." style="font-family:'ubuntu';font-weight:normal"></textarea>

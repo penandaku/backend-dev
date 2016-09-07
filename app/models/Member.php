@@ -77,4 +77,18 @@ class Member extends CI_Model
 	}
 	/* end fungsi logout */
 
+	/* fungsi delete account */
+	function destroy_account($param)
+	{
+		/*
+		* @param : username
+		*/
+		$query = $this->db->query("DELETE FROM tbl_member WHERE username ='$param'");
+		if($query)
+		{
+			return TRUE;
+		}else{
+			return FALSE;
+		}
+	}
 }

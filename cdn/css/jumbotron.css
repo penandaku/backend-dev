@@ -182,17 +182,20 @@ body {
   font-family: 'Roboto';
   font-size: 40px;
   color: #fff;
+  font-weight: 300;
 }
 
 .feedback-descriptions-top {
   font-family: 'Roboto';
   font-size: 20px;
   color: #fff;
+  font-weight: 300;
 }
 
 .feedback-title {
   font-family: 'Roboto';
   color: #333;
+  font-weight: 300;
 }
 
 .feedback-descriptions {
@@ -211,17 +214,20 @@ body {
   font-family: 'Roboto';
   font-size: 40px;
   color: #fff;
+  font-weight: 300;
 }
 
 .bug-descriptions-top {
   font-family: 'Roboto';
   font-size: 20px;
   color: #fff;
+  font-weight: 300;
 }
 
 .bug-title {
   font-family: 'Roboto';
   color: #333;
+  font-weight: 300;
 }
 
 .bug-descriptions {
@@ -262,7 +268,7 @@ body {
   box-sizing: border-box;
   border-radius: 2px;
   background-clip: padding-box;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 .card span.card-title {
     color: #fff;

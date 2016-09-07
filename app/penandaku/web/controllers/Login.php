@@ -24,7 +24,7 @@ class Login extends CI_Controller {
     if($this->member->member_id())
     {
       //alihkan dashboard
-      redirect('member/dashboard');
+      redirect('/');
 
     }else{
       //check dengan form validation

@@ -1,4 +1,4 @@
-<div class="bug-page" style="background-image: url('<?php print cdn('img/bg.png') ?>'); position:relative;background-color:#2cb0a3">
+<div class="bug-page" style="background-image: url('<?php print cdn('img/background.png') ?>'); position:relative;background-color:#1abc9c">
   <div class="container">
     <div class="col-md-8">
       <p class="bug-title-top"><i class="fa fa-bug"></i> Report Bug </p>
@@ -29,22 +29,22 @@
         echo form_open('bug/', $attributes)
         ?>
         <div class="form-group">
-          <label for="fullname" style="font-family:'ubuntu';font-weight:normal">
+          <label for="fullname" style="font-family:'Roboto';font-weight:normal">
               Nama Lengkap
           </label>
-          <input type="text" class="form-control" name="nama"  placeholder="Nama Lengkap" style="font-family:'ubuntu';font-weight:normal">
+          <input type="text" class="form-control" name="nama"  placeholder="Nama Lengkap" style="font-family:'Roboto';font-weight:normal">
         </div>
         <div class="form-group">
-          <label for="fullname" style="font-family:'ubuntu';font-weight:normal">
+          <label for="fullname" style="font-family:'Roboto';font-weight:normal">
               Email Aktif
           </label>
-          <input type="text" class="form-control" name="email"  placeholder="Email Aktif" style="font-family:'ubuntu';font-weight:normal">
+          <input type="text" class="form-control" name="email"  placeholder="Email Aktif" style="font-family:'Roboto';font-weight:normal">
         </div>
         <div class="form-group">
           <label for="fullname" style="font-family:'ubuntu';font-weight:normal">
               Report Bug
           </label>
-          <textarea class="form-control" name="pesan" rows="6"  placeholder="Masukan Laporan Bug dari Anda." style="font-family:'ubuntu';font-weight:normal"></textarea>
+          <textarea class="form-control" name="pesan" rows="6"  placeholder="Masukan Laporan Bug dari Anda." style="font-family:'Roboto';font-weight:normal"></textarea>
         </div>
         <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
         <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Sending..." class="penandaku-btn-bug btn btn-success">Kirim Laporan</button>
