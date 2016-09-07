@@ -1,4 +1,4 @@
-<div class="jumbotron" style="background-image: url('<?php print cdn('img/background.png') ?>'); position:relative;background-color:#1abc9c">
+<div class="jumbotron" style="background-image: url('<?php print cdn('img/wew.png') ?>'); position:relative;background-color:#1abc9c">
   <div class="container" style="color:#fff;margin-top:15px">
     <div class="col-md-8">
     <h2 style="font-family: 'Roboto'; font-weight:300;font-size:40px">Simple Apps for Save and Access <br> Bookmark online.</h2>
@@ -45,23 +45,27 @@
   </div>
   <div class="penandaku-batas"></div>
   <div class="row">
-    <div class="col-md-9" style="font-family:'Roboto';font-weight:normal">
-        <h2>Tentang Kami</h2>
-        <p>Penandaku adalah perusahaan penyedia layanan penyimpanan bookmark secara online, sehingga anda tidak perlu kawatir menyimpan dan mengakses bookmark anda dimanapun dan kapanpun saja.</p>
+    <div class="col-md-9" style="font-family:'Roboto';font-weight:300;font-size:19px">
+        <p style="font-size:25px;"> Tentang Kami</p>
+        <p>Penandaku adalah App penyedia layanan penyimpanan bookmark secara online, sehingga anda tidak perlu kawatir menyimpan dan mengakses bookmark anda dimanapun dan kapanpun saja.</p>
     </div>
     <div class="col-md-3">
       <img class="img-responsive" src="<?php print cdn('img/home.svg') ?>" style="width:200px;margin-left:50px">
     </div>
   </div>
   <div class="penandaku-batas"></div>
-  <div class="row">
-    <div class="col-md-5">
-      <img class="img-responsive" src="<?php print cdn('img/penandaku-laptop.png') ?>" style="width:500px">
+  <div class="row" style="font-family:'Roboto';font-weight:300;font-size:16px">
+    <div class="col-md-4">
+      <p style="font-size:20px;text-align:center"><i class='fa fa-server'></i> UNLIMITED</p>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
     </div>
-    <div class="col-md-7" style="font-family:'Roboto'">
-        <h3>Bergabung Sebagai Pengembang</h3>
-        <p>bergabunglah dengan para pengembang kami, guna mengembangkan penandaku.com agar lebih baik lagi kedepannya.</p>
-        <button type="button" class="btn btn-success">Join Sebagai Pengembang</button>
+    <div class="col-md-4">
+      <p style="font-size:20px;text-align:center"><i class='fa fa-lock'></i> PRIVACY</p>
+      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+   </div>
+    <div class="col-md-4">
+      <p style="font-size:20px;text-align:center"><i class='fa fa-cloud'></i> CLOUD</p>
+      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
     </div>
   </div>
   <div class="penandaku-batas"></div>
