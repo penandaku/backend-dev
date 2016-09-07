@@ -1,4 +1,4 @@
-<div class="jumbotron" style="background-image: url('<?php print cdn('img/wew.png') ?>'); position:relative;background-color:#1abc9c">
+<div class="jumbotron" style="background-image: url('<?php print cdn('img/wew.png') ?>'); position:relative;background-color:#333">
   <div class="container" style="color:#fff;margin-top:15px">
     <div class="col-md-8">
     <h2 style="font-family: 'Roboto'; font-weight:300;font-size:40px">Simple Apps for Save and Access <br> Bookmark online.</h2>
@@ -43,7 +43,6 @@
   <div class="overlay-loader">
 
   </div>
-  <div class="penandaku-batas"></div>
   <div class="row">
     <div class="col-md-9" style="font-family:'Roboto';font-weight:300;font-size:19px">
         <p style="font-size:25px;"> Tentang Kami</p>
@@ -53,22 +52,26 @@
       <img class="img-responsive" src="<?php print cdn('img/home.svg') ?>" style="width:200px;margin-left:50px">
     </div>
   </div>
-  <div class="penandaku-batas"></div>
+
   <div class="row" style="font-family:'Roboto';font-weight:300;font-size:16px">
-    <div class="col-md-4">
-      <p style="font-size:20px;text-align:center"><i class='fa fa-server'></i> UNLIMITED</p>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-    </div>
-    <div class="col-md-4">
-      <p style="font-size:20px;text-align:center"><i class='fa fa-lock'></i> PRIVACY</p>
-      <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-   </div>
-    <div class="col-md-4">
-      <p style="font-size:20px;text-align:center"><i class='fa fa-cloud'></i> CLOUD</p>
-      <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-    </div>
+    <div class="penandaku-batas"></div>
+      <div class="col-md-12">
+        <div class="col-md-4">
+          <p style="font-size:20px;text-align:center"><i class='fa fa-database'></i> UNLIMITED</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+        </div>
+        <div class="col-md-4">
+          <p style="font-size:20px;text-align:center"><i class='fa fa-lock'></i> PRIVACY</p>
+          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+       </div>
+        <div class="col-md-4">
+          <p style="font-size:20px;text-align:center"><i class='fa fa-cloud'></i> CLOUD</p>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </div>
+     </div>
+   <div class="penandaku-batas"></div>
   </div>
-  <div class="penandaku-batas"></div>
+
   </div>
   <div class="main-footer"></div>
   <hr style="margin-top:0px;width:100%">
