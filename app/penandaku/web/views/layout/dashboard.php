@@ -1,22 +1,12 @@
 <div class="container" style="margin-top:30px">
   <div class="row">
     <div class="col-md-3">
-      <div class="card">
-          <div class="card-image">
-              <img class="img-responsive" src="<?php print cdn('img/fika.jpg') ?>">
-          </div>
+      <img src="<?php echo cdn('img/fika.jpg') ?>" class="img-rounded img-responsive" alt="Cinque Terre" width="260" height="300">
+      <div class="panel panel-default" style="margin-top:15px">
+        <div class="panel-heading"><i class="fa fa-user"></i> Overview</div>
+        <div class="panel-body">
 
-          <div class="card-content">
-              <p>Cards for display in portfolio style material design by Google.</p>
-          </div>
-
-          <div class="card-action">
-              <a href="#" target="new_blank">Link</a>
-              <a href="#" target="new_blank">Link</a>
-              <a href="#" target="new_blank">Link</a>
-              <a href="#" target="new_blank">Link</a>
-              <a href="#" target="new_blank">Link</a>
-          </div>
+        </div>
       </div>
     </div>
     <div class="col-md-9">
