@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 06, 2016 at 04:46 
+-- Generation Time: Sep 07, 2016 at 07:09 
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.8
 
@@ -29,21 +29,10 @@ SET time_zone = "+00:00";
 CREATE TABLE `tbl_bookmark` (
   `id_bookmark` int(225) NOT NULL,
   `judul` varchar(150) NOT NULL,
-  `slug` varchar(150) NOT NULL,
-  `url` varchar(150) NOT NULL,
-  `catatan` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_group`
---
-
-CREATE TABLE `tbl_group` (
-  `member_id` int(11) NOT NULL,
-  `label_id` int(11) NOT NULL,
-  `bookmark_id` int(11) NOT NULL
+  `slug` varchar(200) NOT NULL,
+  `label_id` int(225) NOT NULL,
+  `url` text NOT NULL,
+  `descriptions` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -54,9 +43,10 @@ CREATE TABLE `tbl_group` (
 
 CREATE TABLE `tbl_label` (
   `id_label` int(225) NOT NULL,
-  `nama_label` varchar(150) NOT NULL,
-  `slug` varchar(150) NOT NULL,
-  `descriptions` text NOT NULL
+  `member_id` int(225) NOT NULL,
+  `nama_label` varchar(150) DEFAULT NULL,
+  `descriptions` text,
+  `slug` varchar(225) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -67,20 +57,12 @@ CREATE TABLE `tbl_label` (
 
 CREATE TABLE `tbl_member` (
   `id_member` int(225) NOT NULL,
-  `nama_member` varchar(150) NOT NULL,
-  `username` varchar(150) NOT NULL,
-  `password` varchar(150) NOT NULL,
-  `email` varchar(150) NOT NULL,
-  `verifikasi_email` varchar(150) NOT NULL,
-  `foto_member` varchar(150) NOT NULL
+  `nama` varchar(150) DEFAULT NULL,
+  `username` varchar(150) DEFAULT NULL,
+  `password` varchar(150) DEFAULT NULL,
+  `email` varchar(150) DEFAULT NULL,
+  `verivikasi_email` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_member`
---
-
-INSERT INTO `tbl_member` (`id_member`, `nama_member`, `username`, `password`, `email`, `verifikasi_email`, `foto_member`) VALUES
-(1, 'Pondok Kode, Inc.', 'pondokkode', '0d572e628632f17a78e05f5cfe2836db13f2e453', 'pondokkode@gmail.com', '1', 'fika.jpg');
 
 -- --------------------------------------------------------
 
@@ -115,18 +97,11 @@ ALTER TABLE `tbl_bookmark`
   ADD PRIMARY KEY (`id_bookmark`);
 
 --
--- Indexes for table `tbl_group`
---
-ALTER TABLE `tbl_group`
-  ADD PRIMARY KEY (`member_id`,`label_id`,`bookmark_id`),
-  ADD KEY `label_id` (`label_id`),
-  ADD KEY `bookmark_id` (`bookmark_id`);
-
---
 -- Indexes for table `tbl_label`
 --
 ALTER TABLE `tbl_label`
-  ADD PRIMARY KEY (`id_label`);
+  ADD PRIMARY KEY (`id_label`),
+  ADD KEY `member_id` (`member_id`);
 
 --
 -- Indexes for table `tbl_member`
@@ -150,16 +125,6 @@ ALTER TABLE `tbl_user`
 ALTER TABLE `tbl_bookmark`
   MODIFY `id_bookmark` int(225) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `tbl_label`
---
-ALTER TABLE `tbl_label`
-  MODIFY `id_label` int(225) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `tbl_member`
---
-ALTER TABLE `tbl_member`
-  MODIFY `id_member` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
@@ -169,12 +134,10 @@ ALTER TABLE `tbl_user`
 --
 
 --
--- Constraints for table `tbl_group`
+-- Constraints for table `tbl_label`
 --
-ALTER TABLE `tbl_group`
-  ADD CONSTRAINT `tbl_group_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `tbl_member` (`id_member`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `tbl_group_ibfk_2` FOREIGN KEY (`label_id`) REFERENCES `tbl_label` (`id_label`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `tbl_group_ibfk_3` FOREIGN KEY (`bookmark_id`) REFERENCES `tbl_bookmark` (`id_bookmark`) ON UPDATE CASCADE;
+ALTER TABLE `tbl_label`
+  ADD CONSTRAINT `tbl_label_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `tbl_member` (`id_member`) ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
