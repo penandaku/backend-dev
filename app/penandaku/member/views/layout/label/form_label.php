@@ -20,7 +20,8 @@
           <textarea class="form-control" name="descriptions" rows="6"  placeholder="Masukan Keterangan Label." style="font-family:'Roboto';font-weight:normal"><?php echo set_value('descriptions') ?></textarea>
           <?php echo form_error('descriptions'); ?>
         </div>
-        <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
+        <input type="hidden" name="id" value="<?php echo $id_label ?>">
+        <input type="hidden" name="type" value="<?php echo $type ?>">
         <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Saving..." class="penandaku-btn-label btn btn-success">Simpan</button>
         <button type="reset" class="btn btn-danger">Reset</button>
       <?php echo form_close(); ?>

@@ -61,7 +61,7 @@ class Login extends CI_Controller {
                   'member_id' => $member->id_member,
                   'username'  => $member->username,
                   'password'  => $member->password,
-                  'nama'      => $member->nama_member
+                  'nama'      => $member->nama
               ));
               redirect('/');
             }

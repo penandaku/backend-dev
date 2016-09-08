@@ -50,14 +50,37 @@ class Label extends CI_Controller {
         $nama_label   = $this->input->post("nama_label");
         $descriptions = $this->input->post("descriptions");
         $type         = $this->input->post("type");
-        //kondisi type
+        //kondisi type add
         if($type == "add")
         {
-          //code insert
+          $insert = array(
+                      'member_id'   => $this->session->userdata('member_id'),
+                      'nama_label'  => $this->input->post('nama_label'),
+                      'slug'        => url_title(strtolower($this->input->post('nama_label'))),
+                      'descriptions'=> $this->input->post('descriptions')
+          );
+          $this->member->insert_label($insert);
+          //create session flashdata
+          $this->session->set_flashdata('notif', '');
+          redirect('member/label/');
+        //kondisi type edit
         }elseif($type == "edit"){
-          //code update
+          //get id from form
+          $id = $this->input->post('id');
+          $update = array(
+                      'member_id'   => $this->session->userdata('member_id'),
+                      'nama_label'  => $this->input->post('nama_label'),
+                      'slug'        => url_title(strtolower($this->input->post('nama_label'))),
+                      'descriptions'=> $this->input->post('descriptions')
+          );
+          $this->member->update_label($update, $id);
+          //crete session flashdata
+          $this->session->set_flashdata('notif', '');
+          redirect('member/label/');
         }else{
-          //return false
+          //redirect
+          redirect('member/label/add/');
+          return FLASE;
         }
       }else{
         $data = array (
@@ -80,6 +103,13 @@ class Label extends CI_Controller {
       show_404();
       return FALSE;
     }
+  }
+
+  public function edit($param)
+  {
+    /*
+    *@param : get id detail data
+    */
   }
 
 }

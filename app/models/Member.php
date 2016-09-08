@@ -70,6 +70,24 @@ class Member extends CI_Model
 	}
 	/* end fungsi insert join */
 
+	/* fungsi inser label */
+	function insert_label($param){
+			/*
+			* @param : var get controller
+			*/
+	    $this->db->insert('tbl_label', $param);
+	}
+	/* end fungsi insert label */
+
+	/* fungsi update label */
+	function update_label($param, $id){
+			/*
+			* @param : var get controller
+			*/
+	    $this->db->insert('tbl_label', $param, $id);
+	}
+	/* end fungsi update label */
+
 	/* fungsi logout */
 	function logout()
 	{

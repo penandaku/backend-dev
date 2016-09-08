@@ -34,7 +34,6 @@
           <textarea class="form-control" name="descriptions" rows="6"  placeholder="Masukan Keterangan Label." style="font-family:'Roboto';font-weight:normal"></textarea>
           <?php echo form_error('descriptions'); ?>
         </div>
-        <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
         <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Saving..." class="penandaku-btn-bookmark btn btn-success">Simpan</button>
         <button type="reset" class="btn btn-danger">Reset</button>
       <?php echo form_close(); ?>
