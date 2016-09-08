@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 07, 2016 at 07:09 
+-- Generation Time: Sep 08, 2016 at 05:25 
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.8
 
@@ -28,11 +28,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tbl_bookmark` (
   `id_bookmark` int(225) NOT NULL,
-  `judul` varchar(150) NOT NULL,
-  `slug` varchar(200) NOT NULL,
+  `member_id` int(225) NOT NULL,
   `label_id` int(225) NOT NULL,
-  `url` text NOT NULL,
-  `descriptions` text NOT NULL
+  `judul` varchar(200) DEFAULT NULL,
+  `url` text,
+  `slug` varchar(200) DEFAULT NULL,
+  `descriptions` text,
+  `created` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -46,7 +48,7 @@ CREATE TABLE `tbl_label` (
   `member_id` int(225) NOT NULL,
   `nama_label` varchar(150) DEFAULT NULL,
   `descriptions` text,
-  `slug` varchar(225) DEFAULT NULL
+  `slug` varchar(200) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -61,7 +63,7 @@ CREATE TABLE `tbl_member` (
   `username` varchar(150) DEFAULT NULL,
   `password` varchar(150) DEFAULT NULL,
   `email` varchar(150) DEFAULT NULL,
-  `verivikasi_email` varchar(150) DEFAULT NULL
+  `verifikasi_emal` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -94,7 +96,9 @@ INSERT INTO `tbl_user` (`id_user`, `nama_user`, `username`, `password`, `email`,
 -- Indexes for table `tbl_bookmark`
 --
 ALTER TABLE `tbl_bookmark`
-  ADD PRIMARY KEY (`id_bookmark`);
+  ADD PRIMARY KEY (`id_bookmark`),
+  ADD KEY `member_id` (`member_id`),
+  ADD KEY `label_id` (`label_id`);
 
 --
 -- Indexes for table `tbl_label`
@@ -125,6 +129,16 @@ ALTER TABLE `tbl_user`
 ALTER TABLE `tbl_bookmark`
   MODIFY `id_bookmark` int(225) NOT NULL AUTO_INCREMENT;
 --
+-- AUTO_INCREMENT for table `tbl_label`
+--
+ALTER TABLE `tbl_label`
+  MODIFY `id_label` int(225) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tbl_member`
+--
+ALTER TABLE `tbl_member`
+  MODIFY `id_member` int(225) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
@@ -134,10 +148,17 @@ ALTER TABLE `tbl_user`
 --
 
 --
+-- Constraints for table `tbl_bookmark`
+--
+ALTER TABLE `tbl_bookmark`
+  ADD CONSTRAINT `tbl_bookmark_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `tbl_member` (`id_member`),
+  ADD CONSTRAINT `tbl_bookmark_ibfk_2` FOREIGN KEY (`label_id`) REFERENCES `tbl_label` (`id_label`);
+
+--
 -- Constraints for table `tbl_label`
 --
 ALTER TABLE `tbl_label`
-  ADD CONSTRAINT `tbl_label_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `tbl_member` (`id_member`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `tbl_label_ibfk_1` FOREIGN KEY (`member_id`) REFERENCES `tbl_member` (`id_member`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
