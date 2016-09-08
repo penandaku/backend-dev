@@ -23,7 +23,7 @@ class Web extends CI_Controller {
     if($this->member->member_id()){
       //create data array
       $data = array (
-                'title'         => 'Penandaku.com - Simple Apps for Save and Access Bookmark online.',
+                'title'         => 'Penandaku.com - Layanan Penyedia Bookmark Online.',
                 'descriptions'  => '',
                 'keywords'      => ''
       );
@@ -34,7 +34,7 @@ class Web extends CI_Controller {
     }else{
       //create data array
       $data = array (
-                'title'         => 'Penandaku.com - Simple Apps for Save and Access Bookmark online.',
+                'title'         => 'Penandaku.com - Layanan Penyedia Bookmark Online.',
                 'descriptions'  => '',
                 'keywords'      => ''
       );

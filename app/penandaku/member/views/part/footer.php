@@ -21,8 +21,7 @@
             <label style="font-weight:normal;margin-bottom:5px" for="username">Silahkan masukan username Anda untuk mengkonfirmasi.</label>
             <input type="text" name="username" class="form-control" id="username">
           </div>
-          <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-          <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Deleting..." class="penandaku-btn-destroy btn btn-default btn-md" style="width:100%;color:#df3e3e">saya mengerti, tetap lanjutkan hapus</button>
+          <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Deleting..." class="penandaku-btn-destroy btn btn-default btn-md" style="width:100%;color:#df3e3e;padding: 9px 12px;">saya mengerti, tetap lanjutkan hapus</button>
           <?php echo form_close(); ?>
       </div>
     </div>

@@ -61,7 +61,7 @@ body {
     font-family: 'Roboto';
     font-size: 15px;
     font-weight: normal;
-    line-height: 2.5;
+    line-height: 2.0;
     color: #fff;
     width: 100%;
     text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
@@ -112,7 +112,7 @@ body {
   font-family: Roboto;
   font-size: 13px;
   line-height: 1.4;
-  color: #555;
+  color: #fff;
 }
 
 .penandaku-tentang {
@@ -201,6 +201,8 @@ body {
 .feedback-descriptions {
   font-family: 'Roboto';
   color: #333;
+  font-weight: 300;
+  font-size: 17px;
 }
 
 .bug-page {
@@ -233,6 +235,8 @@ body {
 .bug-descriptions {
   font-family: 'Roboto';
   color: #333;
+  font-weight: 300;
+  font-size: 17px;
 }
 
 .statics-page {
@@ -245,6 +249,7 @@ body {
 .statics-title {
   font-family: 'Roboto';
   color: #333;
+  font-size: 20px;
 }
 
 .login-logo {

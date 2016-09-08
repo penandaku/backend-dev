@@ -11,7 +11,7 @@
         <a href="<?php print base_url() ?>member/setting/" class="list-group-item <?php if(isset($setting)) { echo 'active-panel-member'; } ?>"><i class="fa fa-cogs"></i> Setting</a>
       </div>
       <div class="list-group">
-        <div class="list-group-item" style="background-color:#df3e3e;color:#fff">Delete account</div>
+        <div class="list-group-item" style="background-color:#900;color:#fff">Delete account</div>
         <a href="" data-toggle="modal" data-target="#DeleteAccount" class="list-group-item"><i class="fa fa-user-times"></i> Hapus Account</a>
       </div>
     </div>

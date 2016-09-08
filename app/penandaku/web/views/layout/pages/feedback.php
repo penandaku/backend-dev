@@ -1,4 +1,4 @@
-<div class="feedback-page" style="background-image: url('<?php print cdn('img/background.png') ?>'); position:relative;background-color:#1abc9c">
+<div class="feedback-page" style="background-image: url('<?php print cdn('img/wew.png') ?>'); position:relative;background-color:#333">
   <div class="container">
     <div class="col-md-8">
       <p class="feedback-title-top"><i class="fa fa-bell-o"></i> FeedBack </p>
