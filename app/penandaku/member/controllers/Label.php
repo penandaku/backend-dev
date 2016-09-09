@@ -24,7 +24,8 @@ class Label extends CI_Controller {
     {
       $data = array (
                 'title'       => 'Kelola Label &rsaquo; Penandaku.com',
-                'label'   => TRUE
+                'label'       => TRUE,
+                'data_label'  => $this->member->GetAll()
       );
       $this->load->view('part/header', $data);
       $this->load->view('part/sidebar');

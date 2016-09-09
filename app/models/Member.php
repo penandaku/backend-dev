@@ -70,6 +70,24 @@ class Member extends CI_Model
 	}
 	/* end fungsi insert join */
 
+	/* fungsi GetAll */
+	function GetAll()
+	{
+			$this->db->select('*');
+			$this->db->from('tbl_label');
+			$this->db->order_by('id_label', 'DESC');
+			$GetAll = $this->db->get();
+			//jika data ada (lebih dari 0)
+			if($GetAll->num_rows() > 0 )
+			{
+					foreach ($GetAll->result() as $data){
+							$hasil[] = $data;
+					}
+					return $hasil;
+			}
+	}
+	/* end fungsi GetAll */
+
 	/* fungsi inser label */
 	function insert_label($param){
 			/*
