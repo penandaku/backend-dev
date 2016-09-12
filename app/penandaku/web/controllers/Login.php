@@ -72,7 +72,7 @@ class Login extends CI_Controller {
                     'error' => '<div class="alert alert-danger" style="font-family:ubuntu">
                                     <i class="fa fa-exclamation-circle"></i> Username atau Password Anda salah.
                                   </div>',
-                    'title'         => 'Masuk - Penandaku.com',
+                    'title'         => 'Login - Penandaku.com',
                     'descriptions'  => '',
                     'keywords'      => ''
           );
@@ -81,7 +81,7 @@ class Login extends CI_Controller {
       }else{
         //create data array
         $data = array (
-                  'title'         => 'Masuk - Penandaku.com',
+                  'title'         => 'Login - Penandaku.com',
                   'descriptions'  => '',
                   'keywords'      => ''
         );

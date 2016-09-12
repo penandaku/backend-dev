@@ -26,7 +26,7 @@
           <?php echo form_error('password'); ?>
         </div>
           <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-          <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Creating account..." class="penandaku-btn-register btn btn-success btn-lg">Create Account</button>
+          <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Creating account..." class="penandaku-btn-register btn btn-success btn-lg">Create an account</button>
           <span class="penandaku-note-register text-center">
             Dengan mengeklik "Create Account", berarti anda menyetujui
             <a class="text-white" href="<?php print base_url() ?>terms/" target="_blank">layanan</a> and
@@ -59,7 +59,7 @@
       <div class="col-md-12">
         <div class="col-md-4">
           <p style="font-size:20px;text-align:center"><i class='fa fa-database'></i> UNLIMITED</p>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+          <p>Layanan penyimpanan dengan kapasitas tidak terbatas atau unlimited anda tidak perlu kawatir untuk menyimpan ribuan bahkan jutaan data.</p>
         </div>
         <div class="col-md-4">
           <p style="font-size:20px;text-align:center"><i class='fa fa-lock'></i> PRIVACY</p>
@@ -67,7 +67,7 @@
        </div>
         <div class="col-md-4">
           <p style="font-size:20px;text-align:center"><i class='fa fa-cloud'></i> CLOUD</p>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p>Data anda akan kami tempatkan di server cloud kami dengan teknologi SSD (Solid State Hybrid).</p>
         </div>
      </div>
    <div class="penandaku-batas"></div>

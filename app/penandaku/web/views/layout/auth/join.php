@@ -29,25 +29,35 @@
           <div class="panel panel-default" style="font-family:'Roboto'">
             <div class="panel-body">
               <?php
-                $attributes = array('id' => 'frm_login');
-                echo form_open('login/', $attributes)
+                $attributes = array('id' => 'frm_join');
+                echo form_open('join/', $attributes)
                 ?>
                 <div class="form-group">
-                  <label style="font-weight:normal">Username or Email</label>
-                  <input type="text" name="username" class="form-control" value="<?php echo set_value('username') ?>" placeholder="Enter username or email">
+                  <label style="font-weight:normal">Nama Lengkap</label>
+                  <input type="text" name="nama" class="form-control" value="<?php echo set_value('nama') ?>" placeholder="Masukkan Nama Lengkap.">
+                  <?php echo form_error('nama'); ?>
+                </div>
+                <div class="form-group">
+                  <label style="font-weight:normal">Username</label>
+                  <input type="text" name="username" class="form-control" value="<?php echo set_value('username') ?>" placeholder="Masukkan Username Anda.">
                   <?php echo form_error('username'); ?>
                 </div>
                 <div class="form-group">
+                  <label style="font-weight:normal">Email Aktif</label>
+                  <input type="email" name="email" class="form-control" value="<?php echo set_value('email') ?>" placeholder="Masukkan Email Anda.">
+                  <?php echo form_error('email'); ?>
+                </div>
+                <div class="form-group">
                   <label style="font-weight:normal">Password <a href="<?php print base_url() ?>forgot-password/">(forgot password)</a></label>
-                  <input type="password" name="password" class="form-control" value="<?php echo set_value('password') ?>" placeholder="Enter Password">
+                  <input type="password" name="password" class="form-control" value="<?php echo set_value('password') ?>" placeholder="Masukkan Password Anda.">
                   <?php echo form_error('password'); ?>
                 </div>
-                <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Signing in..." class="penandaku-btn-login btn btn-sm btn-success">Sign in</button>
+                <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Creating account..." class="penandaku-btn-join btn btn-sm btn-success">Create an account</button>
               <?php echo form_close(); ?>
             </div>
         </div>
         <div class="create-account" style="font-family:'Roboto'">
-          Daftar gratis ! <a href="<?php print base_url() ?>join/">Buat akun baru</a>.
+          Sudah punya akun ! <a href="<?php print base_url() ?>login/">Login</a>.
         </div>
       </div>
       <div class="col-md-4">
@@ -58,7 +68,7 @@
     <script src="<?php print cdn('js/custom.js') ?>"></script>
     <script src="<?php print cdn('js/ie10-viewport-bug-workaround.js') ?>"></script>
     <script>
-      $('.penandaku-btn-login').on('click', function() {
+      $('.penandaku-btn-join').on('click', function() {
           var $this = $(this);
               $this.button('loading');
               setTimeout(function() {

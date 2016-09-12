@@ -77,11 +77,11 @@ class Join extends CI_Controller {
       }else{
         //create data array
         $data = array (
-                  'title'         => 'Daftar - Penandaku.com',
+                  'title'         => 'Join - Penandaku.com',
                   'descriptions'  => '',
                   'keywords'      => ''
         );
-        $this->load->view('layout/auth/join');
+        $this->load->view('layout/auth/join', $data);
       }
     }
   }
