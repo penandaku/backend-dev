@@ -1,7 +1,7 @@
 <div class="jumbotron" style="background-image: url('<?php print cdn('img/wew.png') ?>'); position:relative;background-color:#333">
   <div class="container" style="color:#fff;margin-top:15px">
     <div class="col-md-8">
-    <h2 style="font-family: 'Roboto'; font-weight:300;font-size:40px">PENANDAKU<br> Layanan Penyedia Bookmark Online</h2>
+    <h2 style="font-family: 'Roboto'; font-weight:300;font-size:40px"><strong>PENANDA</strong> KU<br> Layanan Penyedia Bookmark Online</h2>
     <p style="font-family: 'Roboto'; font-weight:300;font-size:25px">Simpan dan Akses Bookmark Anda secara online dimana dan kapanpun saja secara mudah.</p>
     </div>
     <div class="col-md-4">
