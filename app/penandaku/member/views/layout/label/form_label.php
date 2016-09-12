@@ -22,7 +22,7 @@
         </div>
         <input type="hidden" name="id" value="<?php echo $id_label ?>">
         <input type="hidden" name="type" value="<?php echo $type ?>">
-        <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Saving..." class="penandaku-btn-label btn btn-success">Simpan</button>
+        <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Menyimpan..." class="penandaku-btn-label btn btn-success">Simpan</button>
         <button type="reset" class="btn btn-danger">Reset</button>
       <?php echo form_close(); ?>
     </div>

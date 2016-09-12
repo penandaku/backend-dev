@@ -38,6 +38,10 @@
 <script src="<?php print cdn('js/bootstrap.min.js') ?>"></script>
 <script src="<?php print cdn('js/custom.js') ?>"></script>
 <script src="<?php print cdn('js/ie10-viewport-bug-workaround.js') ?>"></script>
+<script type="text/javascript" src="<?php print cdn('build/vue.js') ?>"></script>
+<script type="text/javascript" src="<?php print cdn('build/vue-router.js') ?>"></script>
+<script type="text/javascript" src="<?php print cdn('build/vue-animated-list.js') ?>"></script>
+<script type="text/javascript" src="<?php print cdn('build/vue-validator.js') ?>"></script>
 <script>
     $('.penandaku-btn-register').on('click', function() {
         var $this = $(this);

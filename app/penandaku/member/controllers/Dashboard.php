@@ -72,17 +72,17 @@ class Dashboard extends CI_Controller {
             redirect('/');
           }else{
             //set session flashdata
-            $this->session->set_flashdata('notif', '<div class="alert alert-danger" style="font-family:Roboto"><i class="fa fa-exclamation-circle"></i> Username Tidak Terdaftar.</div>');
+            $this->session->set_flashdata('notif', '<div class="alert alert-danger" style="font-family:Roboto"><i class="fa fa-exclamation-circle"></i> Username tidak terdaftar.</div>');
             redirect('member/dashboard/');
           }
        }else{
          //set session flashdata
-         $this->session->set_flashdata('notif', '<div class="alert alert-danger" style="font-family:Roboto"><i class="fa fa-exclamation-circle"></i> Username Tidak Terdaftar.</div>');
+         $this->session->set_flashdata('notif', '<div class="alert alert-danger" style="font-family:Roboto"><i class="fa fa-exclamation-circle"></i> Username tidak terdaftar.</div>');
          redirect('member/dashboard/');
        }
       }else{
         //set session flashdata
-        $this->session->set_flashdata('notif', '<div class="alert alert-danger" style="font-family:Roboto"><i class="fa fa-exclamation-circle"></i> Username Belum Diisi.</div>');
+        $this->session->set_flashdata('notif', '<div class="alert alert-danger" style="font-family:Roboto"><i class="fa fa-exclamation-circle"></i> Username belum diisi.</div>');
         redirect('member/dashboard/');
       }
     }else{
