@@ -2,7 +2,7 @@
   <div class="container" style="color:#fff;margin-top:15px">
     <div class="col-md-8">
     <h2 style="font-family: 'Roboto'; font-weight:300;font-size:40px"><strong>PENANDA</strong> KU<br> Layanan Penyedia Bookmark Online</h2>
-    <p style="font-family: 'Roboto'; font-weight:300;font-size:25px">Simpan dan Akses Bookmark Anda secara online dimana dan kapanpun saja secara mudah.</p>
+    <p style="font-family: 'Roboto'; font-weight:300;font-size:25px">Aplikasi sederhana untuk menyimpan dan akses Bookmark secara online dimanapun dan kapanpun.</p>
     </div>
     <div class="col-md-4">
       <?php
@@ -25,12 +25,11 @@
           <input type="text" name="password" class="form-control" value="<?php echo set_value('password') ?>" id="password" placeholder="Masukan Password Anda." style="height:45px;font-size:16px;font-family:'Roboto';font-weight:normal">
           <?php echo form_error('password'); ?>
         </div>
-          <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
           <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Creating account..." class="penandaku-btn-register btn btn-success btn-lg">Create an account</button>
           <span class="penandaku-note-register text-center">
             Dengan mengeklik "Create Account", berarti anda menyetujui
             <a class="text-white" href="<?php print base_url() ?>terms/" target="_blank">layanan</a> and
-            <a class="text-white" href="<?php print base_url() ?>policies/" target="_blank">kebijakan privacy</a>. <span class="js-email-notice">kami.</span>
+            <a class="text-white" href="<?php print base_url() ?>policies/" target="_blank">kebijakan privacy</a> <span class="js-email-notice">kami.</span>
           </span>
       <?php echo form_close(); ?>
     </div>

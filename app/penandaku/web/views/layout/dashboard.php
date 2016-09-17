@@ -15,6 +15,7 @@
         <div class="panel-body">
 
         </div>
+        <div class="panel-footer" style="text-align:center">Show more bookmark...</div>        
       </div>
     </div>
   </div>
