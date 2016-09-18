@@ -14,28 +14,35 @@
             $this.button('loading');
             setTimeout(function() {
               $this.button('reset');
-            }, 800);
+            }, 8000);
+    });
+    $('.penandaku-btn-join').on('click', function() {
+        var $this = $(this);
+            $this.button('loading');
+            setTimeout(function() {
+              $this.button('reset');
+            }, 8000);
     });
     $('.penandaku-login').on('click', function() {
         var $this = $(this);
             $this.button('loading');
             setTimeout(function() {
               $this.button('reset');
-            }, 800);
+            }, 8000);
     });
     $('.penandaku-btn-feedback').on('click', function() {
         var $this = $(this);
             $this.button('loading');
             setTimeout(function() {
               $this.button('reset');
-            }, 800);
+            }, 8000);
     });
     $('.penandaku-btn-bug').on('click', function() {
         var $this = $(this);
             $this.button('loading');
             setTimeout(function() {
               $this.button('reset');
-            }, 800);
+            }, 8000);
     });
     $.ajaxSetup({
     beforeSend: function() {

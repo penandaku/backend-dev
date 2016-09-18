@@ -39,6 +39,10 @@ class Join extends CI_Controller {
       $this->form_validation->set_message('valid_email', '<div class="alert alert-danger" style="font-family:Roboto">
                                                            <i class="fa fa-exclamation-circle"></i> Alamat {field} tidak valid.
                                                           </div>');
+      $this->form_validation->set_message('callback_getResponseCaptcha',
+                                                          '<div class="alert alert-danger" style="font-family:Roboto">
+                                                            <i class="fa fa-exclamation-circle"></i> {field} {g-recaptcha-response} harus diisi.
+                                                          </div>');
       //status
       if($this->form_validation->run() == TRUE)
       {
@@ -51,18 +55,30 @@ class Join extends CI_Controller {
           $data = array (
                     'error' => '<div class="alert alert-danger">
                                    <i class="fa fa-exclamation-circle"></i> username yang anda masukan sudah terdaftar.
-                                </div>'
+                                </div>',
+                    'title'         => 'Join - Penandaku.com',
+                    'descriptions'  => '',
+                    'keywords'      => '',
+                    'recaptcha_html' => $this->recaptcha->render()                                 
           );
-          $this->load->view('layout/auth/join', $data);
+          $this->load->view('part/header',$data);
+          $this->load->view('layout/auth/join');
+          $this->load->view('part/footer');
 
         }elseif($checking_email != FALSE){
           //set data error array
           $data = array (
                     'error' => '<div class="alert alert-danger">
                                    <i class="fa fa-exclamation-circle"></i> email address yang anda masukan sudah terdaftar.
-                                </div>'
+                                </div>',
+                    'title'         => 'Join - Penandaku.com',
+                    'descriptions'  => '',
+                    'keywords'      => '',
+                    'recaptcha_html' => $this->recaptcha->render()
           );
-          $this->load->view('layout/auth/join', $data);
+          $this->load->view('part/header',$data);
+          $this->load->view('layout/auth/join');
+          $this->load->view('part/footer');
         }else{
           //var insert array
           $insert = array(
