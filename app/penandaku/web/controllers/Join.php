@@ -25,7 +25,6 @@ class Join extends CI_Controller {
       redirect('/');
     }else{
       //check dengan form validation
-      $this->form_validation->set_rules('nama', 'Nama', 'trim|required|min_length[4]');
       $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
       $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[3]');
       $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');
@@ -39,10 +38,6 @@ class Join extends CI_Controller {
                                                            </div>');
       $this->form_validation->set_message('valid_email', '<div class="alert alert-danger" style="font-family:Roboto">
                                                            <i class="fa fa-exclamation-circle"></i> Alamat {field} tidak valid.
-                                                          </div>');
-      $this->form_validation->set_message('callback_getResponseCaptcha',
-                                                          '<div class="alert alert-danger" style="font-family:Roboto">
-                                                            <i class="fa fa-exclamation-circle"></i> {field} {g-recaptcha-response} harus diisi.
                                                           </div>');
       //status
       if($this->form_validation->run() == TRUE)
@@ -71,7 +66,6 @@ class Join extends CI_Controller {
         }else{
           //var insert array
           $insert = array(
-                      'nama'        => '',
                       'username'    => '',
                       'password'    => '',
                       'email'       => ''
@@ -87,7 +81,9 @@ class Join extends CI_Controller {
                   'keywords'      => '',
                   'recaptcha_html' => $this->recaptcha->render()
         );
-        $this->load->view('layout/auth/join', $data);
+        $this->load->view('part/header',$data);
+        $this->load->view('layout/auth/join');
+        $this->load->view('part/footer');
       }
     }
   }
@@ -102,7 +98,9 @@ class Join extends CI_Controller {
       }
       else
       {
-          $this->form_validation->set_message('getResponseCaptcha', '%s harus diisi' );
+          $this->form_validation->set_message('getResponseCaptcha', ' <div class="alert alert-danger" style="font-family:Roboto">
+                                                                          <i class="fa fa-exclamation-circle"></i> %s harus diisi.
+                                                                      </div>' );
           return false;
       }
   }
