@@ -2,10 +2,10 @@
 
 /**
  * CodeIgniter NO Captcha ReCAPTCHA a.k.a reCAPTCHA Version 2.0 library
- * 
+ *
  * This library is based on official reCAPTCHA library for PHP
  * https://github.com/google/ReCAPTCHA
- * 
+ *
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -98,7 +98,7 @@ class ReCaptcha {
         $answers = json_decode($getResponse, TRUE);
 
         if (trim($answers ['success']) == true) {
-            // Right captcha! 
+            // Right captcha!
             $return = array(
                 'success' => TRUE,
                 'error_codes' => ''

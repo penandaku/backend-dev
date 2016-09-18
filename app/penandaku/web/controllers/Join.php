@@ -29,15 +29,20 @@ class Join extends CI_Controller {
       $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email');
       $this->form_validation->set_rules('username', 'Username', 'trim|required|min_length[3]');
       $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[3]');
+      $this->form_validation->set_rules('g-recaptcha-response', '<b>Captcha</b>', 'callback_getResponseCaptcha');
       //set message
-      $this->form_validation->set_message('required', '<div class="alert alert-danger" style="font-family:Roboto">
-                                                          <i class="fa fa-exclamation-circle"></i> {field} harus diisi.
-                                                       </div>');
-      $this->form_validation->set_message('min_length', '<div class="alert alert-danger" style="font-family:Roboto">
-                                                          <i class="fa fa-exclamation-circle"></i> {field} tidak boleh kurang dari {param} karakter.
-                                                         </div>');
+      $this->form_validation->set_message('required',     '<div class="alert alert-danger" style="font-family:Roboto">
+                                                            <i class="fa fa-exclamation-circle"></i> {field} harus diisi.
+                                                          </div>');
+      $this->form_validation->set_message('min_length',   '<div class="alert alert-danger" style="font-family:Roboto">
+                                                            <i class="fa fa-exclamation-circle"></i> {field} tidak boleh kurang dari {param} karakter.
+                                                           </div>');
       $this->form_validation->set_message('valid_email', '<div class="alert alert-danger" style="font-family:Roboto">
                                                            <i class="fa fa-exclamation-circle"></i> Alamat {field} tidak valid.
+                                                          </div>');
+      $this->form_validation->set_message('callback_getResponseCaptcha',
+                                                          '<div class="alert alert-danger" style="font-family:Roboto">
+                                                            <i class="fa fa-exclamation-circle"></i> {field} {g-recaptcha-response} harus diisi.
                                                           </div>');
       //status
       if($this->form_validation->run() == TRUE)
@@ -79,10 +84,27 @@ class Join extends CI_Controller {
         $data = array (
                   'title'         => 'Join - Penandaku.com',
                   'descriptions'  => '',
-                  'keywords'      => ''
+                  'keywords'      => '',
+                  'recaptcha_html' => $this->recaptcha->render()
         );
         $this->load->view('layout/auth/join', $data);
       }
     }
   }
+
+  public function getResponseCaptcha($str)
+  {
+      $this->load->library('recaptcha');
+      $response = $this->recaptcha->verifyResponse($str);
+      if ($response['success'])
+      {
+          return true;
+      }
+      else
+      {
+          $this->form_validation->set_message('getResponseCaptcha', '%s harus diisi' );
+          return false;
+      }
+  }
+
 }

@@ -10,10 +10,6 @@
         echo form_open(base_url('join/'), $attributes)
         ?>
         <div class="form-group">
-          <input type="text" name="nama" class="form-control" value="<?php echo set_value('nama') ?>" id="nama" placeholder="Masukan Nama Anda."  style="height:45px;font-size:16px;font-family:'Roboto';font-weight:normal">
-          <?php echo form_error('nama'); ?>
-        </div>
-        <div class="form-group">
           <input type="text" name="username" class="form-control" value="<?php echo set_value('username') ?>" id="username" placeholder="Masukan Username Anda." style="height:45px;font-size:16px;font-family:'Roboto';font-weight:normal">
           <?php echo form_error('username'); ?>
         </div>
@@ -24,6 +20,9 @@
         <div class="form-group">
           <input type="text" name="password" class="form-control" value="<?php echo set_value('password') ?>" id="password" placeholder="Masukan Password Anda." style="height:45px;font-size:16px;font-family:'Roboto';font-weight:normal">
           <?php echo form_error('password'); ?>
+        </div>
+        <div class="form-group">
+          <?php echo $recaptcha_html;?>
         </div>
           <button type="submit" id="load" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Creating account..." class="penandaku-btn-register btn btn-success btn-lg">Create an account</button>
           <span class="penandaku-note-register text-center">

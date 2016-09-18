@@ -25,7 +25,8 @@ class Web extends CI_Controller {
       $data = array (
                 'title'         => 'Penandaku.com - Layanan Penyedia Bookmark Online.',
                 'descriptions'  => '',
-                'keywords'      => ''
+                'keywords'      => '',
+                'recaptcha_html' => $this->recaptcha->render()
       );
       //parse view dengan array data
       $this->load->view('part/header',$data);
@@ -36,7 +37,8 @@ class Web extends CI_Controller {
       $data = array (
                 'title'         => 'Penandaku.com - Layanan Penyedia Bookmark Online.',
                 'descriptions'  => '',
-                'keywords'      => ''
+                'keywords'      => '',
+                'recaptcha_html' => $this->recaptcha->render()
       );
       //parse view dengan array data
       $this->load->view('part/header',$data);
