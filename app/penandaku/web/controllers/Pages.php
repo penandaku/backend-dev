@@ -70,4 +70,22 @@ class Pages extends CI_Controller {
     $this->load->view('layout/pages/policies');
     $this->load->view('part/footer');
   }
+
+  public function getResponseCaptcha($str)
+  {
+      $this->load->library('recaptcha');
+      $response = $this->recaptcha->verifyResponse($str);
+      if ($response['success'])
+      {
+          return true;
+      }
+      else
+      {
+          $this->form_validation->set_message('getResponseCaptcha', ' <div class="alert alert-danger" style="font-family:Roboto">
+                                                                          <i class="fa fa-exclamation-circle"></i> %s harus diisi.
+                                                                      </div>' );
+          return false;
+      }
+  }
+
 }
