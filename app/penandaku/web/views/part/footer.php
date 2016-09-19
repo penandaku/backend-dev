@@ -5,7 +5,7 @@
 </footer>
 <script src="<?php print cdn('js/jquery.min.js') ?>"></script>
 <script src="<?php print cdn('js/bootstrap.min.js') ?>"></script>
-<script src="http://pixelcog.github.io/parallax.js/js/parallax.min.js"></script>
+<script src="<?php print cdn('js/jquery.jparallax.js') ?>"></script>
 <script src="<?php print cdn('js/custom.js') ?>"></script>
 <script src="<?php print cdn('js/ie10-viewport-bug-workaround.js') ?>"></script>
 <script>

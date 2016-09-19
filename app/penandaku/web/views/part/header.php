@@ -8,7 +8,7 @@
     <meta name="author" content="Fika Ridaul Maulayya">
     <link rel="icon" href="<?php print cdn('img/favicon.png') ?>">
     <title><?php print $title ?></title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="<?php print cdn('css/font-awesome/css/font-awesome.css') ?>">
     <link rel="stylesheet" href="<?php print cdn('css/bootstrap.min.css') ?>">
     <link rel="stylesheet" href="<?php print cdn('css/ie10-viewport-bug-workaround.css') ?>">

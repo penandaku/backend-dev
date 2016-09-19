@@ -1,2 +1,2 @@
-# backend-dev
-Backend Development
+# PENANDA KU
+Beta Development Resource

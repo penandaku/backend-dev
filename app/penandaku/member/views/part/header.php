@@ -32,7 +32,7 @@
           <?php if($this->session->userdata('member_id')) { ?>
             <ul class="nav navbar-nav navbar-right">
               <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php print $this->session->userdata('nama'); ?>
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php print $this->session->userdata('username'); ?>
                 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
                   <li><a href="<?php print base_url() ?>member/dashboard/"><i class="fa fa-home"></i> Dashboard</a></li>
