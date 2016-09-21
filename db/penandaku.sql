@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Sep 08, 2016 at 05:25 
+-- Generation Time: Sep 21, 2016 at 04:37 
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 7.0.8
 
@@ -63,8 +63,15 @@ CREATE TABLE `tbl_member` (
   `username` varchar(150) DEFAULT NULL,
   `password` varchar(150) DEFAULT NULL,
   `email` varchar(150) DEFAULT NULL,
-  `verifikasi_emal` varchar(150) DEFAULT NULL
+  `verifikasi_email` varchar(150) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_member`
+--
+
+INSERT INTO `tbl_member` (`id_member`, `nama`, `username`, `password`, `email`, `verifikasi_email`) VALUES
+(1, 'pondokkode', 'pondokkode', '0d572e628632f17a78e05f5cfe2836db13f2e453', 'pondokkode@gmail.com', '1');
 
 -- --------------------------------------------------------
 
@@ -137,7 +144,7 @@ ALTER TABLE `tbl_label`
 -- AUTO_INCREMENT for table `tbl_member`
 --
 ALTER TABLE `tbl_member`
-  MODIFY `id_member` int(225) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_member` int(225) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_user`
 --
